@@ -54,7 +54,7 @@
       font-size: $space-base;
       cursor: pointer;
       @include rounded(15px);
-      
+
       input[type=checkbox]{
         margin-top: $space-base;
         margin-bottom: $space-base;
@@ -88,7 +88,7 @@
       display: grid;
       grid-template-columns: 1fr 2fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-template-areas: 
+      grid-template-areas:
       "imagen titulo votos"
       "imagen galeria agendar";
 
@@ -100,7 +100,7 @@
 
         img {
           margin: 0px;
-          
+
         }
       }
 
@@ -136,8 +136,8 @@
 
         img{
           margin-bottom: $space-base;
-          min-height: $space-8;
-          min-width: $space-8;
+          min-height: 64px;
+          min-width: 64px;
 
         }
 
@@ -163,7 +163,7 @@
         padding-top: $space-2;
         text-align: right;
         grid-area: agendar;
-        
+
         button {
           width: 95%;
           text-transform: uppercase;
@@ -208,4 +208,3 @@
   }
 
 }
-
