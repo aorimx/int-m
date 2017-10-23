@@ -1,0 +1,19 @@
+$vendors: "-moz-", "-webkit-", ""; // you can add other vendor prefixes or remove them without needing to change the mixin.
+
+@mixin rounded($radius: 0.5em) {
+    @each $vendor in $vendors {
+        #{$vendor}border-radius: $radius;
+    }
+}
+
+@mixin box-shadow($top, $left, $blur, $size, $color, $inset: false) {
+    @if $inset {
+        @each $vendor in $vendors {
+            #{$vendor}box-shadow:inset $top $left $blur $size $color;
+            }
+    } @else {
+        @each $vendor in $vendors {
+            #{$vendor}box-shadow: $top $left $blur $size $color;
+            }
+    }
+}
