@@ -6,7 +6,7 @@ $color-secondary: #30A3D6;  .color-secondary { color: $color-secondary; };  .bg-
 $color-inverse:   #FFF;     .color-inverse   { color: $color-inverse;   };  .bg-color-inverse   { background-color: $color-inverse;   }
 $color-success:   #4caf50;  .color-success   { color: $color-success;   };  .bg-color-success   { background-color: $color-success;   }
 $color-info:      #03a9f4;  .color-info      { color: $color-info;      };  .bg-color-info      { background-color: $color-info;      }
-$color-warning:   #ff9800;  .color-warning   { color: $color-warning;   };  .bg-color-warning   { background-color: $color-warning;   }
+$color-warning:   #F5A623;  .color-warning   { color: $color-warning;   };  .bg-color-warning   { background-color: $color-warning;   }
 $color-danger:    #f44336;  .color-danger    { color: $color-danger;    };  .bg-color-danger    { background-color: $color-danger;    }
 
 // Grayscale
@@ -30,28 +30,25 @@ $space-5: $space-base * 5; // 40px
 
 // font family
 @font-face {
-  font-family: 'BrixSans', sans-serif;
-  src: url('fonts/Light.ttf')  format('truetype');
+  font-family: 'Aspira', sans-serif;
+  src: url('../fonts/Regular.ttf') format('truetype');
   font-weight: regular;
 }
 @font-face {
-  font-family: 'BrixSans', sans-serif;
-  src: url('fonts/Bold.ttf')  format('truetype');
+  font-family: 'Aspira', sans-serif;
+  src: url('../fonts/Light.ttf')  format('truetype');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Aspira', sans-serif;
+  src: url('../fonts/Bold.ttf')  format('truetype');
   font-weight: bold;
 }
-$font-family-base: 'BrixSans', sans-serif;
+$font-family-base: 'Aspira', sans-serif;
 $headings-font-family: $font-family-base;
 $font-size-base: 16px;
 
 // media queries
+$tablet: 992px;
+$mobile: 768px;
 $max-width-screen: 1232px;
-$units-stack: 768px;
-$screen-xs-min: 609px;
-$screen-sm-min: 808px + 17;
-$screen-md-min: 1032px + 17;
-$screen-lg-min: 1240px + 17;
-$screen-xs-max: $screen-sm-min - 1;
-
-// Variables para vista de producto.
-$stock-available-color: #5cb85c;
-$action-button-color: $color-primary;
