@@ -20,6 +20,9 @@ $gray-ghost:   lighten($gray-base, 95%);  .gray-ghost   { color: $gray-ghost;   
 
 $body-bg-color: $white;
 $inner-body-bg: $white;
+$shadow-color: rgba(0, 0, 0, 0.15);
+
+$transparent-orange: rgba(245,166,35,0.5);
 
 // Vertical space
 $space-base: 8px;
@@ -49,6 +52,11 @@ $headings-font-family: $font-family-base;
 $font-size-base: 16px;
 
 // media queries
+$tablet: 900px;
+$mobile: 600px;
+$max-width-screen: 1232px;
+/*
 $tablet: 992px;
 $mobile: 768px;
 $max-width-screen: 1232px;
+*/
