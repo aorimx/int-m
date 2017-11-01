@@ -1,0 +1,478 @@
+// Styles for the Search results section.
+
+// Head Title
+.head-title{
+  display: flex;
+  .img-container{
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    padding:$space-2;
+    img {
+      margin: 0;
+    }
+    @media screen and (max-width: $mobile){
+      display: none;
+    }
+  }
+  .title {
+    width: 75%;
+    padding: $space-2;
+    @media screen and (max-width: $mobile){
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    h1{
+      text-transform: capitalize;
+      display: inline;
+      span{
+        color: $color-secondary;
+      }
+    }
+  }
+  .location-result {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    img{
+      margin: 0;
+    }
+    p {
+      padding-top: 4px;
+      margin-bottom: 0;
+      margin-left: $space-base;
+    }
+  }
+  @media screen and (max-width: $mobile){
+    font-size: 12px;
+  }
+}
+
+// filters bar @TODO define the proper way to present the info
+.search-filters {
+  display: flex;
+  background-color: $gray-ghost;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: $space-3;
+  @include box-shadow(5px, 5px, 5px, 0px, $gray-lighter );
+  @media screen and (max-width: $tablet){
+    display: flex;
+    justify-content: center;
+  }
+  @media screen and (max-width: $mobile){
+    font-size: 12px;
+    justify-content: center;
+    @include rounded(32px);
+  }
+  // Filters items
+  .filters-check{
+    display: flex;
+    @media screen and (max-width: $mobile){
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    label {
+      display: flex;
+      margin: $space-base;
+      background-color: white;
+      padding: 5px;
+      font-size: 14px;
+      align-items: center;
+      cursor: pointer;
+      @include rounded(16px);
+
+      input[type=checkbox]{
+        margin: $space-base 0 $space-base $space-base;
+      }
+
+      b{
+        margin: $space-base;
+      }
+    }
+  }
+}
+
+// how many results are funded.
+.search-coincidences {
+  margin-bottom: $space-3;
+  @media screen and (max-width: $mobile){
+    font-size: 12px;
+  }
+}
+
+// Main container for results and sidebar
+.main-results{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 100%;
+  @media screen and (max-width: $mobile){
+    flex-flow: column;
+    font-size: 12px;
+    position: relative;
+  }
+  // Main results container
+  .container-results {
+    display:flex;
+    flex-flow: column;
+    width: 70%;
+    padding-right: $space-3;
+    margin-bottom: $space-4;
+    @media screen and (max-width: $tablet){
+      width: 75%;
+      padding: $space-4 0 $space-4 $space-2;
+    }
+    @media screen and (max-width: $mobile){
+      width: 100%;
+      padding: $space-2 0 $space-2 0;
+    }
+
+    // Grid cointainer for each result
+    .result {
+      border-top: 1px solid $gray-lighter;
+      border-bottom: 1px solid $gray-lighter;
+      padding: $space-2 0 $space-2 0;
+      display: grid;
+      grid-template-columns: 1fr 1.6fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 8px;
+      grid-template-areas:
+      "imagen titulo votos"
+      "imagen galeria agendar";
+      @media screen and(max-width: $mobile){
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 8px;
+        grid-template-rows: 0.5fr 0.5fr .5fr;
+        grid-template-areas:
+        "imagen titulo"
+        "imagen galeria"
+        "imagen agendar";
+
+      }
+      // Main image
+      .image-result{
+        display: flex;
+        position:relative;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        grid-area: imagen;
+        @media screen and(max-width: $mobile){
+          justify-content: center;
+        }
+        .doctor-image {
+          position: relative;
+          width: 100%;
+          max-width: 170px;
+          height: auto;
+          margin: 0px;
+          @media screen and(max-width: $mobile){
+            align-items: center;
+            max-width: 150px;
+            height:auto;
+            padding: 2px;
+          }
+        }
+        // Overlap div visible only in mobile
+        .likes-overlap{
+          display: none;
+          @media screen and (max-width: $mobile){
+            display:inherit;
+            position: absolute;
+            top: 140px;
+            height: auto;
+            background-color: $transparent-orange;
+            @include rounded(15px);
+          }
+
+          h1 {
+            margin:0;
+            padding: 2px $space-2;
+            color: $white;
+          }
+        }
+
+      }
+      // Dr's name, especiality and "stars"
+      .title-result {
+        display: flex;
+        grid-area: titulo;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        @media screen and (max-width: $tablet){
+          font-size: 12px;
+        }
+        @media screen and(max-width: $mobile){
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+
+        h3{
+          text-transform: capitalize;
+          color: $color-secondary;
+          margin-bottom: 0px;
+        }
+
+        h4 {
+          margin-bottom: 8px;
+          align-items: center;
+        }
+
+        h5 {
+          margin-bottom: $space-base;
+        }
+        img {
+          display: inline-block;
+          justify-content: flex-start;
+          vertical-align: middle;
+          margin: 0px
+        }
+      }
+      // Location, experience and images gallery
+      .location-mini-thumnails{
+        display: flex;
+        grid-area: galeria;
+        align-items: flex-start;
+        flex-flow: column;
+        justify-content: flex-end;
+        @media screen and(max-width: $tablet){
+          font-size: 12px
+        }
+        p{
+          margin: 0;
+          line-height: 1;
+          margin-bottom: $space-base
+        }
+        // Image gallery
+        .mini-thumnails {
+          img{
+            margin-bottom: 0;
+            padding: 0 4px;
+            max-width: 60px;
+            height: auto;
+            @media screen and(max-width: $tablet){
+              max-width: 50px;
+            }
+            @media screen and(max-width: $mobile){
+              display: none;
+            }
+          }
+        }
+      }
+      // Score and votes
+      .score-result{
+        text-align: right;
+        grid-area: votos;
+        @media screen and (max-width: $tablet){
+          font-size: 12px;
+        }
+        @media screen and(max-width: $mobile){
+          display:none;
+        }
+
+        img{
+          margin: 0px;
+          max-width: 35px;
+          display: inline-block;
+          vertical-align: sub;
+        }
+
+        h2 {
+          margin: $space-base $space-base;
+          display: inline;
+        }
+
+      }
+      // Booking and phone number
+      .book-cta{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        grid-area: agendar;
+        @media screen and (max-width: $tablet){
+          font-size: 12px;
+        }
+        @media screen and (max-width: $mobile){
+          align-items: center;
+        }
+
+        button {
+          margin-bottom: 0;
+          @media screen and (max-width: $tablet){
+            font-size: 12px;
+            margin:0;
+          }
+          @media screen and (max-width: $mobile){
+            margin:0;
+          }
+        }
+      }
+    }
+  }
+  // Ads container visible only in mobile
+  .ads-mobile{
+    display: none;
+    @media screen and (max-width: $mobile){
+      display: flex;
+      flex-flow: row;
+      .img-ads-mobile{
+        display: flex;
+        align-items: center;
+        width: 40%;
+        height: auto;
+        justify-content: flex-start;
+
+        img{
+          margin:0;
+        }
+      }
+
+      .text-ads-mobile{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        width: 60%;
+        justify-content: center;
+        padding: $space-base;
+
+        h4{
+          margin: 0;
+        }
+
+        img {
+          margin: $space-base;
+        }
+
+        button {
+          font-size: 1em;
+          padding: $space-base;
+          margin-bottom: $space-base;
+        }
+      }
+    }
+  }
+  // Sidebar container
+  .ad-sidebar {
+    display:flex;
+    width: 30%;
+    flex-flow: column;
+    padding-right: $space-2;
+    padding-left: $space-2;
+    @media screen and(max-width: $tablet){
+      width: 35%;
+      font-size: 12px;
+      padding: $space-4 $space-2 $space-4 $space-2;
+    }
+    @media screen and (max-width: $mobile){
+      width: 100%;
+      padding: 0;
+    }
+
+    // Aside ads container
+    .advertising {
+      margin-bottom: $space-2;
+      &:last-child {
+        position: -webkit-sticky;
+        position: sticky ;
+        top: 60px;
+      }
+      background-color: #fff;
+      @include box-shadow(0px, 0px, 5px, 0px, $shadow-color);
+      &:hover {
+        @include box-shadow(-1px, 1px, 5px, 0px, $shadow-color);
+      }
+      @media screen and(max-width: $mobile){
+        display: none;
+      }
+      // Main image for Ads
+      .ad-img{
+        display:grid;
+        grid-area: adimg;
+        align-items: flex-start;
+        img{
+          margin: 0px;
+        }
+
+      }
+      // Description text
+      .aside-text{
+        padding: $space-3;
+        grid-area: adtext;
+        .ad-header {
+          display: flex;
+          flex-wrap: wrap;
+          align-content: center;
+          text-align: center;
+          justify-content: center;
+          margin-bottom: $space-2;
+          h4 {
+            margin-bottom: 0;
+          }
+          img{
+            margin-bottom: 0;
+            margin-left: $space-base;
+          }
+        }
+        p {
+          margin: 0;
+          @media screen and(max-width: $mobile){
+            display: none;
+          }
+        }
+        // @media screen and (max-width: $tablet){
+        //   padding: $space-base;
+        // }
+        // @media screen and (max-width: $mobile){
+        //   padding: $space-base;
+        //
+        // }
+        // Rate and contact button
+        .aside-btn{
+          text-align: center;
+          grid-area: adbtn;
+
+          @media screen and(max-width: $mobile){
+            text-align: right;
+            padding-right: 8px;
+          }
+          .score {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+              margin: 0;
+            }
+            p {
+              padding-top: 12px;
+              margin-left: $space-base;
+              font-size: 18px;
+              font-weight: 800;
+              @media screen and (max-width: $mobile){
+                margin: 0;
+              }
+            }
+          }
+          p {
+            span {
+              font-size: 16px;
+              font-weight: 300;
+            }
+          }
+          button{
+            margin-top: $space-base;
+            margin-bottom: 0;
+            @media screen and (max-width: $tablet){
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

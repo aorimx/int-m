@@ -20,6 +20,9 @@ $gray-ghost:   lighten($gray-base, 95%);  .gray-ghost   { color: $gray-ghost;   
 
 $body-bg-color: $white;
 $inner-body-bg: $white;
+$shadow-color: rgba(0, 0, 0, 0.15);
+
+$transparent-orange: rgba(245,166,35,0.5);
 
 // Vertical space
 $space-base: 8px;
@@ -48,7 +51,9 @@ $font-family-base: 'Aspira', sans-serif;
 $headings-font-family: $font-family-base;
 $font-size-base: 16px;
 
-// Media queries
-$tablet: 992px;
-$mobile: 768px;
-$max-width-screen: 1232px; // 1200px of full width and 16px per side on padding
+
+// media queries
+$tablet: 900px;
+$mobile: 600px;
+$max-width-screen: 1232px;
+
