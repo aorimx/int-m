@@ -11,6 +11,7 @@
 }
 form {
   display: flex;
+  flex-direction: column;
   fieldset {
     display: flex;
     flex-direction: column;
@@ -34,22 +35,21 @@ textarea, select {
   min-width: 160px;
   width: 100%;
   background-color: transparent;
-  padding-top: 2px;
+  padding-top: 4px;
   padding-left: $space-base;
   margin-bottom: $space-2;
   border: solid 1px $gray-lighter;
-  border-radius: 4px;
+  border-radius: 0;
   text-align: left;
   font-size: 16px;
   font-weight: 300;
   color: $color-primary;
-  -webkit-transition: border-color 400ms ease-in-out;
-  transition: border-color 400ms ease-in-out;
+  box-shadow: 0px 6px 5px -6px rgba(0, 0, 0, 0.15);
   &:focus {
     outline: none;
   }
   &:active, &:focus, &:visited {
-    border-bottom-color: $color-inverse;
+    box-shadow: 0px 6px 5px -4px rgba(0, 0, 0, 0.15);
   }
 }
 select {

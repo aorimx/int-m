@@ -48,7 +48,7 @@ $font-family-base: 'Aspira', sans-serif;
 $headings-font-family: $font-family-base;
 $font-size-base: 16px;
 
-// media queries
+// Media queries
 $tablet: 992px;
 $mobile: 768px;
-$max-width-screen: 1232px;
+$max-width-screen: 1232px; // 1200px of full width and 16px per side on padding

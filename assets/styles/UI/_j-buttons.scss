@@ -1,4 +1,5 @@
 button, .btn-solid {
+  position: relative;
   width: 100%;
   max-width: 320px;
   // height: fit-content;
@@ -18,14 +19,14 @@ button, .btn-solid {
   text-transform: uppercase;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+  box-shadow: 0px 6px 5px -6px rgba(0, 0, 0, 0.15);
   @media screen and (max-width: 768px){
     max-width: 100%;
   }
-  &:hover,
   &:active,
   &:focus,
-  &:visited{
-    background-color: darken($color-secondary, 10);
+  &:visited {
+    box-shadow: 0px 6px 5px -4px rgba(0, 0, 0, 0.15);
   }
   &:active,
   &:focus{
@@ -93,7 +94,7 @@ button, .btn-solid {
   background: transparent;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
-  &:hover{
+  &:hover,{
     background-color: $color-secondary;
     color: $color-inverse;
     border: solid 2px $color-secondary;
@@ -104,7 +105,7 @@ button, .btn-solid {
   &.bg-color-primary {
     border: solid 2px $color-primary;
     color: $color-primary;
-    &:hover{
+    &:hover,{
       background-color: $color-primary;
       color: $color-inverse;
       border: solid 2px $color-primary;
@@ -175,4 +176,26 @@ button, .btn-solid {
       margin-right: 0;
     }
   }
+}
+//Ripple efect for button feedback
+.ripple{
+  overflow:hidden;
+}
+.ripple-effect{
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: white;
+  animation: ripple-animation 2s;
+}
+@keyframes ripple-animation {
+    from {
+      transform: scale(1);
+      opacity: 0.4;
+    }
+    to {
+      transform: scale(100);
+      opacity: 0;
+    }
 }

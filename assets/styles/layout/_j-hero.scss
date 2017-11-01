@@ -12,16 +12,26 @@ main.hero {
   flex-direction: column;
   padding: 16px;
   text-align: center;
+  background-color: #88cff5;
   background-image: url("../images/landing-cover.svg");
   background-size: cover;
   background-position: center;
+  @media screen and (max-width: $mobile){
+    background-size: 640%;
+    background-position: bottom;
+  }
   h1,h3 {
     text-transform: none;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.17);
     color: white;
-    font-size: 64px;
     line-height: 1;
     margin: 0;
+  }
+  h1 {
+    font-size: 64px;
+    @media screen and (max-width: $mobile) {
+      font-size: 40px;
+    }
   }
   h3 {
     font-size: 32px;
