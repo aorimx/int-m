@@ -56,4 +56,9 @@ $font-size-base: 16px;
 $tablet: 900px;
 $mobile: 600px;
 $max-width-screen: 1232px;
+$max-width-screen-8: 960px;
+$max-width-screen-9: 1080px;
 
+// Tabs border-bottom as an indicator and bold text
+$tab-border-bottom: 5px solid rgba($color-primary, 0.5) ;
+$tab-text-bold: 800;

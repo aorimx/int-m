@@ -17,3 +17,49 @@ $vendors: "-moz-", "-webkit-", ""; // you can add other vendor prefixes or remov
             }
     }
 }
+
+@mixin display-child($n) {
+   @for $i from 2 through $n {
+     &:nth-child(#{$i}) {
+       a {
+         display: inline-block;
+       }
+     }
+   }
+}
+
+//==========================================================
+// Easy way to do tabs selectors ( labels and input radios)
+// with a border indicator *optional
+//==========================================================
+@mixin tabs-selector($n, $tab-border-indicator, $tab-text-bold) {
+  @for $i from 1 through $n {
+      .tabs-radio:nth-of-type(#{$i}):checked {
+          & ~ .tabs-label:nth-of-type(#{$i}) {
+            transition: all 500ms ease-in-out;
+              @if $tab-border-indicator{
+                border-bottom: $tab-border-indicator;
+              } @else {
+                border-bottom: 0;
+              }
+              @if $tab-text-bold{
+                font-weight: $tab-text-bold;
+              } @else {
+
+              }
+            }
+          & ~ .tabs-content:nth-of-type(#{$i}) {
+              display: block;
+          }
+      }
+      .tabs-radio:nth-of-type(#{$i}):disabled {
+          & ~ .tabs-label:nth-of-type(#{$i}):not(.tabs-label-hide) {
+              color: white;
+              cursor: no-drop;
+          }
+          & ~ .hide-if-disabled:nth-of-type(#{$i}) {
+              display: none;
+          }
+      }
+  }
+}
