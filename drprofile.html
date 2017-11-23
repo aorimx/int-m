@@ -84,7 +84,7 @@
               Para clinicas y hospitales
             </li>
           </a>
-          <a href="">
+          <a data-fancybox data-src="#register" data-modal="true" href="javascript:;">
             <li>
               <button class="btn-sign-up btn-outline bg-color-primary">
                 Registro
@@ -92,7 +92,7 @@
             </li>
           </a>
           <li>
-            <a href="">Iniciar sesión</a>
+            <a data-fancybox data-src="#login" data-modal="true" href="javascript:;">Iniciar sesión</a>
           </li>
         </ul>
       </nav>
@@ -101,6 +101,72 @@
         <span></span>
         <span></span>
       </div>
+      <!-- Register Modal -->
+      <div id="register" class="modal-type1">
+        <div class="modal-style">
+          <h2>Registro</h2>
+          <input type="text" name="Name" value="Nombre" >
+          <input type="email" name="email" value="Correo Electrónico" >
+          <input type="text" name="password" value="Contraseña" >
+          <div class="remember-forgot">
+            <span>
+              <input type="checkbox" id="remember">
+              <label for="remember">Recordarme</label>
+            </span>
+            <a data-fancybox data-src="#reset" data-modal="true" onclick="$.fancybox.close();" href="javascript:;">¿Olvidaste tu contraseña?</a>
+          </div>
+          <div class="modal-btns">
+            <div class="first-btn">
+              <button class="bg-color-warning" onclick="$.fancybox.close();registerAlert()">Registrarse</button>
+            </div>
+            <button class="facebook-btn" type="button">
+              <div class="facebtn-text-img">
+                <p>Registrate con</p>
+                <img src="assets/images/facebook-back-btn.svg" alt="">
+              </div>
+            </button>
+          </div>
+          <div class="dr-register-bar">
+            <p>¿Eres Doctor?</p>
+            <a href="#">Registrate Aqui</a>
+          </div>
+        </div>
+      </div>
+      <!-- Login Modal -->
+      <div id="login" class="modal-type1">
+          <div class="modal-style">
+            <h2>Inicio de Sesion</h2>
+            <input type="email" name="email" value="Correo Electrónico" >
+            <input type="text" name="password" value="Contraseña" >
+            <div class="remember-forgot">
+              <span>
+                <input type="checkbox" id="remember">
+                <label for="remember">Recordarme</label>
+              </span>
+              <a data-fancybox data-src="#reset" data-modal="true" onclick="$.fancybox.close();" href="javascript:;">¿Olvidaste tu contraseña?</a>
+            </div>
+            <div class="modal-btns">
+              <div class="first-btn">
+                <button class="bg-color-warning">Iniciar sesion</button>
+              </div>
+              <button class="facebook-btn" type="button">
+                <div class="facebtn-text-img">
+                  <p>iniciar sesion con</p>
+                  <img src="assets/images/facebook-back-btn.svg" alt="">
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      <!-- Password Reset -->
+      <div id="reset" class="modal-type1">
+          <div class="modal-style">
+            <h2>Restablecer contraseña</h2>
+            <input type="email" name="email" value="Correo Electrónico" >
+            <p>Te enviaremos un correo para restablecer tu contraseña</p>
+            <button type="button" onclick="$.fancybox.close();resetAlert()">Restablecer contraseña</button>
+          </div>
+        </div>
     </header>
   </div>
   <!--  Main content -->
@@ -284,7 +350,7 @@
     </div>
     <!-- Comments Tab -->
     <div class="tabs-content hide-if-disabled">
-      <article class="tab-comments">
+      <article class="tab-comments" id="tab-comments">
 
         <div class="tab-info-title">
           <img src="./assets/images/experience-icon.svg" alt="">
@@ -1018,5 +1084,25 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvC4za6hNYM9HgaA6JsJ0Tt1BJRJdw58U&callback=initMap">
     </script>
+  <!-- Alerts for succeed reset / register -->
+  <script type="text/javascript">
+      function registerAlert() {
+        swal({
+    title: "Correo Enviado",
+    text: "Te hemos enviado un correo, sigue las instrucciones",
+    icon: "success",
+    button: "Entendido",
+  });
+      }
+
+      function resetAlert() {
+        swal({
+    title: "Correo Enviado",
+    text: "Te hemos enviado un correo para recuperar tu contraseña.",
+    icon: "success",
+    button: "Regresar",
+  });
+      }
+  </script>
 </body>
 </html>

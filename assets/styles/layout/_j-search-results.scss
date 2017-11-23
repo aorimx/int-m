@@ -109,6 +109,15 @@
   }
 }
 
+.phone-modal-styles {
+  display: none;
+  h2 {
+    text-transform: capitalize;
+    font-size: 1.5em;
+    color: $color-secondary;
+  }
+}
+
 // Main container for results and sidebar
 .main-results{
   display: flex;

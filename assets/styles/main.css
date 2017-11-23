@@ -863,6 +863,13 @@ main.content {
   .search-coincidences p {
     margin: 0; }
 
+.phone-modal-styles {
+  display: none; }
+  .phone-modal-styles h2 {
+    text-transform: capitalize;
+    font-size: 1.5em;
+    color: #30A3D6; }
+
 .main-results {
   display: flex;
   flex-direction: row;
@@ -1157,6 +1164,89 @@ main.content {
             @media screen and (max-width: 900px) {
               .main-results .ad-sidebar .advertising .aside-text .aside-btn button {
                 font-size: 12px; } }
+
+.modal-type1 {
+  display: none;
+  padding: 0; }
+  .modal-type1 .modal-style {
+    display: flex;
+    flex-flow: column;
+    width: 300px; }
+    .modal-type1 .modal-style h2 {
+      text-transform: capitalize;
+      font-size: 1.5em;
+      color: #30A3D6; }
+    .modal-type1 .modal-style input [type="text"] {
+      width: 100%; }
+    .modal-type1 .modal-style hr {
+      height: 2px;
+      color: #6A696A; }
+    .modal-type1 .modal-style p {
+      font-size: 12px;
+      color: #6A696A; }
+    .modal-type1 .modal-style .remember-forgot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .modal-type1 .modal-style .remember-forgot input {
+        display: inline-flex;
+        margin: 0; }
+      .modal-type1 .modal-style .remember-forgot label {
+        display: inline-flex;
+        font-size: 12px;
+        margin: 0; }
+      .modal-type1 .modal-style .remember-forgot a {
+        font-size: 12px; }
+    .modal-type1 .modal-style .modal-btns {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      width: 100%;
+      height: auto; }
+      .modal-type1 .modal-style .modal-btns .first-btn {
+        width: 100%;
+        border-bottom: 2px solid #f2f2f2; }
+        .modal-type1 .modal-style .modal-btns .first-btn button {
+          margin-top: 16px;
+          margin-left: 0;
+          margin-bottom: 16px;
+          margin-left: 0; }
+      .modal-type1 .modal-style .modal-btns .facebook-btn {
+        width: 100%;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        text-transform: capitalize;
+        background-color: #4d7fcc; }
+        .modal-type1 .modal-style .modal-btns .facebook-btn .facebtn-text-img {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .modal-type1 .modal-style .modal-btns .facebook-btn .facebtn-text-img p {
+            display: flex;
+            margin-top: 0;
+            margin-right: 8px;
+            margin-bottom: 0;
+            margin-left: 0;
+            color: #ffffff; }
+          .modal-type1 .modal-style .modal-btns .facebook-btn .facebtn-text-img img {
+            display: flex;
+            width: 20px;
+            height: auto;
+            margin: 0; }
+    .modal-type1 .modal-style .dr-register-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 50px;
+      margin-top: 16px;
+      font-weight: 400;
+      border-radius: 0.5em; }
+      .modal-type1 .modal-style .dr-register-bar p:first-of-type {
+        margin: 0;
+        padding-left: 8px; }
+      .modal-type1 .modal-style .dr-register-bar a {
+        padding-right: 8px; }
 
 main.content {
   max-width: 1232px;

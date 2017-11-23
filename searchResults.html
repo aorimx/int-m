@@ -17,7 +17,7 @@
   <!-- Header content -->
   <div class="header-container">
     <header class="main-nav">
-      <a href="home.html">
+      <a href="">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         	 viewBox="0 0 473.3 85.9" style="enable-background:new 0 0 473.3 85.9;" xml:space="preserve">
           <path class="logo-fill" d="M0,20.3h14.4v65.3H0V20.3z"/>
@@ -61,9 +61,9 @@
           		c0.9,0,1.3,0.1,1.4,0.1c0.2,0.1,0.4,0.2,0.5,0.4C464.2,72.6,464.3,72.8,464.3,73z"/>
           	<path class="logo-fill" d="M471.8,69.7c-0.9-1.7-2.2-3-3.9-3.9c-3.3-1.8-7-1.8-10.3,0c-1.7,0.9-3,2.2-3.9,3.9c-0.9,1.7-1.4,3.4-1.4,5.2
           		c0,1.8,0.5,3.6,1.4,5.2c0.9,1.7,2.2,3,3.9,3.9s3.4,1.4,5.2,1.4s3.6-0.5,5.2-1.4c1.7-0.9,3-2.2,3.9-3.9c0.9-1.7,1.4-3.4,1.4-5.2
-          		C473.2,73.1,472.7,71.3,471.8,69.7z M480.8,74.9c0,1.4-0.4,2.7-1.1,4c-0.7,1.3-1.7,2.3-3,3c-2.6,1.4-5.5,1.4-8,0
+          		C473.2,73.1,472.7,71.3,471.8,69.7z M470.8,74.9c0,1.4-0.4,2.7-1.1,4c-0.7,1.3-1.7,2.3-3,3c-2.6,1.4-5.5,1.4-8,0
           		c-1.3-0.7-2.3-1.7-3-3s-1.1-2.6-1.1-4s0.4-2.8,1.1-4.1c0.7-1.3,1.7-2.3,3-3s2.6-1,4-1c1.3,0,2.7,0.4,4,1c1.3,0.7,2.3,1.7,3,3
-          		C480.4,72.2,480.8,73.5,480.8,74.9z"/>
+          		C470.4,72.2,470.8,73.5,470.8,74.9z"/>
           </g>
           <rect y="0.3" class="logo-fill" width="14.4" height="14.4"/>
           <path class="logo-fill" d="M105.8,73.7c-1.7-0.1-3.5-0.7-4.5-2c-0.5-0.7-0.8-1.4-1-2.3c-0.6-2.4-0.1-4.9-0.1-7.4c0-2.1,0-4.2,0-6.3
@@ -83,7 +83,7 @@
               Para clinicas y hospitales
             </li>
           </a>
-          <a href="">
+          <a data-fancybox data-src="#register" data-modal="true" href="javascript:;">
             <li>
               <button class="btn-sign-up btn-outline bg-color-primary">
                 Registro
@@ -91,7 +91,7 @@
             </li>
           </a>
           <li>
-            <a href="">Iniciar sesión</a>
+            <a data-fancybox data-src="#login" data-modal="true" href="javascript:;">Iniciar sesión</a>
           </li>
         </ul>
       </nav>
@@ -100,6 +100,72 @@
         <span></span>
         <span></span>
       </div>
+      <!-- Register Modal -->
+      <div id="register" class="modal-type1">
+        <div class="modal-style">
+          <h2>Registro</h2>
+          <input type="text" name="Name" value="Nombre" >
+          <input type="email" name="email" value="Correo Electrónico" >
+          <input type="text" name="password" value="Contraseña" >
+          <div class="remember-forgot">
+            <span>
+              <input type="checkbox" id="remember">
+              <label for="remember">Recordarme</label>
+            </span>
+            <a data-fancybox data-src="#reset" data-modal="true" onclick="$.fancybox.close();" href="javascript:;">¿Olvidaste tu contraseña?</a>
+          </div>
+          <div class="modal-btns">
+            <div class="first-btn">
+              <button class="bg-color-warning" onclick="$.fancybox.close();registerAlert()">Registrarse</button>
+            </div>
+            <button class="facebook-btn" type="button">
+              <div class="facebtn-text-img">
+                <p>Registrate con</p>
+                <img src="assets/images/facebook-back-btn.svg" alt="">
+              </div>
+            </button>
+          </div>
+          <div class="dr-register-bar">
+            <p>¿Eres Doctor?</p>
+            <a href="#">Registrate Aqui</a>
+          </div>
+        </div>
+      </div>
+      <!-- Login Modal -->
+      <div id="login" class="modal-type1">
+          <div class="modal-style">
+            <h2>Inicio de Sesion</h2>
+            <input type="email" name="email" value="Correo Electrónico" >
+            <input type="text" name="password" value="Contraseña" >
+            <div class="remember-forgot">
+              <span>
+                <input type="checkbox" id="remember">
+                <label for="remember">Recordarme</label>
+              </span>
+              <a data-fancybox data-src="#reset" data-modal="true" onclick="$.fancybox.close();" href="javascript:;">¿Olvidaste tu contraseña?</a>
+            </div>
+            <div class="modal-btns">
+              <div class="first-btn">
+                <button class="bg-color-warning" >Iniciar Sesion</button>
+              </div>
+              <button class="facebook-btn" type="button">
+                <div class="facebtn-text-img">
+                  <p>Iniciar sesion con</p>
+                  <img src="assets/images/facebook-back-btn.svg" alt="">
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      <!-- Password Reset -->
+      <div id="reset" class="modal-type1">
+          <div class="modal-style">
+            <h2>Restablecer contraseña</h2>
+            <input type="email" name="email" value="Correo Electrónico" >
+            <p>Te enviaremos un correo para restablecer tu contraseña</p>
+            <button type="button" onclick="$.fancybox.close();resetAlert()">Restablecer contraseña</button>
+          </div>
+        </div>
     </header>
   </div>
 <div class="j-workspace">
@@ -136,11 +202,13 @@
     <section class="container-results">
       <article class="result">
         <div class="image-result">
-          <img class="doctor-image" src="assets/images/drprofile.jpg" alt="">
+          <a href="drprofile.html">
+            <img class="doctor-image" src="assets/images/drprofile.jpg" alt="">
+          </a>
           <div class="likes-overlap"><h2>9.9</h2></div>
         </div>
         <div class="title-result">
-          <h3>Dr. Leonardo Gutierrez Hernandez.</h3>
+          <h3><a href="drprofile.html">Dr. Leonardo Gutierrez Hernandez.</a></h3>
           <h4>Otorrinolaringologo</h4><img src="assets/images/stars-5.svg" alt="">
         </div>
         <div class="location-mini-thumnails">
@@ -159,20 +227,30 @@
         <div class="score-result">
           <img src="assets/images/like.svg" alt="">
           <h2>9.9</h2><p>999 votos</p>
-          <a href="#">5 comentarios</a>
+          <a href="drprofile.html#tabcomments">5 comentarios</a>
         </div>
         <div class="book-cta">
-          <a href="#">Mostrar Telefono</a>
+          <a data-fancybox data-src="#phoneModal1" data-modal="true" href="javascript:;">
+            Mostrar Telefono</a>
           <button class="bg-color-warning">AGENDAR CITA</button>
+          <div id="phoneModal1" class="phone-modal-styles">
+            <h2>Teléfonos</h2>
+            <p>Recuerda agendar en un horario de oficina</br>
+                <a href="tel:+523313981659">01 (33) 3333 3333</a></p>
+            <p>Teléfono para urgencias</br>
+                01 (33) 3333 3333</p>
+          </div>
         </div>
       </article>
       <article class="result">
         <div class="image-result">
-          <img class="doctor-image" src="assets/images/drprofile.jpg" alt="">
+          <a href="drprofile.html">
+            <img class="doctor-image" src="assets/images/drprofile.jpg" alt="">
+          </a>
           <div class="likes-overlap"><h2>9.9</h2></div>
         </div>
         <div class="title-result">
-          <h3>Dr. Leonardo Gutierrez Hernandez.</h3>
+          <h3><a href="drprofile.html">Dr. Leonardo Gutierrez Hernandez.</a></h3>
           <h4>Otorrinolaringologo</h4><img src="assets/images/stars-5.svg" alt="">
         </div>
         <div class="location-mini-thumnails">
@@ -190,78 +268,106 @@
         </div>
         <div class="score-result">
           <img src="assets/images/like.svg" alt="">
-          <h2>9.9</h2><p>999 votos</p><br />
-          <a href="#">5 comentarios</a>
+          <h2>9.9</h2><p>999 votos</p>
+          <a href="drprofile.html#tabcomments">5 comentarios</a>
         </div>
         <div class="book-cta">
-          <a href="#">Mostrar Telefono</a>
+          <a data-fancybox data-src="#phoneModal1" data-modal="true" href="javascript:;">
+            Mostrar Telefono</a>
           <button class="bg-color-warning">AGENDAR CITA</button>
+          <div id="phoneModal1" class="phone-modal-styles">
+            <h2>Teléfonos</h2>
+            <p>Recuerda agendar en un horario de oficina</br>
+                <a href="tel:+523313981659">01 (33) 3333 3333</a></p>
+            <p>Teléfono para urgencias</br>
+                01 (33) 3333 3333</p>
+          </div>
         </div>
       </article>
       <article class="result">
-          <div class="image-result">
+        <div class="image-result">
+          <a href="drprofile.html">
             <img class="doctor-image" src="assets/images/drprofile.jpg" alt="">
-            <div class="likes-overlap"><h2>9.9</h2></div>
+          </a>
+          <div class="likes-overlap"><h2>9.9</h2></div>
+        </div>
+        <div class="title-result">
+          <h3><a href="drprofile.html">Dr. Leonardo Gutierrez Hernandez.</a></h3>
+          <h4>Otorrinolaringologo</h4><img src="assets/images/stars-5.svg" alt="">
+        </div>
+        <div class="location-mini-thumnails">
+          <div>
+            <p>
+              Encarnacion de Diaz, Jalisco. <br>
+              10 años de experiencia.
+            </p>
           </div>
-          <div class="title-result">
-            <h3>Dr. Leonardo Gutierrez Hernandez.</h3>
-            <h4>Otorrinolaringologo</h4><img src="assets/images/stars-5.svg" alt="">
+          <div class="mini-thumnails">
+            <img src="assets/images/galleryimg.jpg" alt="">
+            <img src="assets/images/galleryimg.jpg" alt="">
+            <img src="assets/images/galleryimg.jpg" alt="">
           </div>
-          <div class="location-mini-thumnails">
-            <div>
-              <p>
-                Encarnacion de Diaz, Jalisco. <br>
-                10 años de experiencia.
-              </p>
-            </div>
-            <div class="mini-thumnails">
-              <img src="assets/images/galleryimg.jpg" alt="">
-              <img src="assets/images/galleryimg.jpg" alt="">
-              <img src="assets/images/galleryimg.jpg" alt="">
-            </div>
+        </div>
+        <div class="score-result">
+          <img src="assets/images/like.svg" alt="">
+          <h2>9.9</h2><p>999 votos</p>
+          <a href="drprofile.html#tabcomments">5 comentarios</a>
+        </div>
+        <div class="book-cta">
+          <a data-fancybox data-src="#phoneModal1" data-modal="true" href="javascript:;">
+            Mostrar Telefono</a>
+          <button class="bg-color-warning">AGENDAR CITA</button>
+          <div id="phoneModal1" class="phone-modal-styles">
+            <h2>Teléfonos</h2>
+            <p>Recuerda agendar en un horario de oficina</br>
+                <a href="tel:+523313981659">01 (33) 3333 3333</a></p>
+            <p>Teléfono para urgencias</br>
+                01 (33) 3333 3333</p>
           </div>
-          <div class="score-result">
-            <img src="assets/images/like.svg" alt="">
-            <h2>9.9</h2><p>999 votos</p><br />
-            <a href="#">5 comentarios</a>
-          </div>
-          <div class="book-cta">
-            <a href="#">Mostrar Telefono</a>
-            <button class="bg-color-warning">AGENDAR CITA</button>
-          </div>
-        </article>
+        </div>
+      </article>
       <article class="result">
-          <div class="image-result">
+        <div class="image-result">
+          <a href="drprofile.html">
             <img class="doctor-image" src="assets/images/drprofile.jpg" alt="">
-            <div class="likes-overlap"><h2>9.9</h2></div>
+          </a>
+          <div class="likes-overlap"><h2>9.9</h2></div>
+        </div>
+        <div class="title-result">
+          <h3><a href="drprofile.html">Dr. Leonardo Gutierrez Hernandez.</a></h3>
+          <h4>Otorrinolaringologo</h4><img src="assets/images/stars-5.svg" alt="">
+        </div>
+        <div class="location-mini-thumnails">
+          <div>
+            <p>
+              Encarnacion de Diaz, Jalisco. <br>
+              10 años de experiencia.
+            </p>
           </div>
-          <div class="title-result">
-            <h3>Dr. Leonardo Gutierrez Hernandez.</h3>
-            <h4>Otorrinolaringologo</h4><img src="assets/images/stars-5.svg" alt="">
+          <div class="mini-thumnails">
+            <img src="assets/images/galleryimg.jpg" alt="">
+            <img src="assets/images/galleryimg.jpg" alt="">
+            <img src="assets/images/galleryimg.jpg" alt="">
           </div>
-          <div class="location-mini-thumnails">
-            <div>
-              <p>
-                Encarnacion de Diaz, Jalisco. <br>
-                10 años de experiencia.
-              </p>
-            </div>
-            <div class="mini-thumnails">
-              <img src="assets/images/galleryimg.jpg" alt="">
-              <img src="assets/images/galleryimg.jpg" alt="">
-              <img src="assets/images/galleryimg.jpg" alt="">
-            </div>
+        </div>
+        <div class="score-result">
+          <img src="assets/images/like.svg" alt="">
+          <h2>9.9</h2><p>999 votos</p>
+          <a href="drprofile.html#tabcomments">5 comentarios</a>
+        </div>
+        <div class="book-cta">
+          <a data-fancybox data-src="#phoneModal1" data-modal="true" href="javascript:;">
+            Mostrar Telefono</a>
+          <button class="bg-color-warning">AGENDAR CITA</button>
+          <div id="phoneModal1" class="phone-modal-styles">
+            <h2>Teléfonos</h2>
+            <p>Recuerda agendar en un horario de oficina</br>
+                <a href="tel:+523313981659">01 (33) 3333 3333</a></p>
+            <p>Teléfono para urgencias</br>
+                01 (33) 3333 3333</p>
           </div>
-          <div class="score-result">
-            <img src="assets/images/like.svg" alt="">
-            <h2>9.9</h2><p>999 votos</p><br />
-            <a href="#">5 comentarios</a>
-          </div>
-          <div class="book-cta">
-            <a href="#">Mostrar Telefono</a>
-            <button class="bg-color-warning">AGENDAR CITA</button>
-          </div>
-        </article>
+        </div>
+      </article>
       <!-- This Article is an example for Ads for mobile -->
       <article class="ads-mobile">
         <div class="img-ads-mobile">
@@ -275,11 +381,13 @@
       </article>
       <article class="result">
         <div class="image-result">
-          <img class="doctor-image" src="assets/images/drprofile.jpg" alt="">
+          <a href="drprofile.html">
+            <img class="doctor-image" src="assets/images/drprofile.jpg" alt="">
+          </a>
           <div class="likes-overlap"><h2>9.9</h2></div>
         </div>
         <div class="title-result">
-          <h3>Dr. Leonardo Gutierrez Hernandez.</h3>
+          <h3><a href="drprofile.html">Dr. Leonardo Gutierrez Hernandez.</a></h3>
           <h4>Otorrinolaringologo</h4><img src="assets/images/stars-5.svg" alt="">
         </div>
         <div class="location-mini-thumnails">
@@ -297,21 +405,31 @@
         </div>
         <div class="score-result">
           <img src="assets/images/like.svg" alt="">
-          <h2>9.9</h2><p>999 votos</p><br />
-          <a href="#">5 comentarios</a>
+          <h2>9.9</h2><p>999 votos</p>
+          <a href="drprofile.html#tabcomments">5 comentarios</a>
         </div>
         <div class="book-cta">
-          <a href="#">Mostrar Telefono</a>
+          <a data-fancybox data-src="#phoneModal1" data-modal="true" href="javascript:;">
+            Mostrar Telefono</a>
           <button class="bg-color-warning">AGENDAR CITA</button>
+          <div id="phoneModal1" class="phone-modal-styles">
+            <h2>Teléfonos</h2>
+            <p>Recuerda agendar en un horario de oficina</br>
+                <a href="tel:+523313981659">01 (33) 3333 3333</a></p>
+            <p>Teléfono para urgencias</br>
+                01 (33) 3333 3333</p>
+          </div>
         </div>
       </article>
       <article class="result">
         <div class="image-result">
-          <img class="doctor-image" src="assets/images/drprofile.jpg" alt="">
+          <a href="drprofile.html">
+            <img class="doctor-image" src="assets/images/drprofile.jpg" alt="">
+          </a>
           <div class="likes-overlap"><h2>9.9</h2></div>
         </div>
         <div class="title-result">
-          <h3>Dr. Leonardo Gutierrez Hernandez.</h3>
+          <h3><a href="drprofile.html">Dr. Leonardo Gutierrez Hernandez.</a></h3>
           <h4>Otorrinolaringologo</h4><img src="assets/images/stars-5.svg" alt="">
         </div>
         <div class="location-mini-thumnails">
@@ -329,78 +447,64 @@
         </div>
         <div class="score-result">
           <img src="assets/images/like.svg" alt="">
-          <h2>9.9</h2><p>999 votos</p><br />
-          <a href="#">5 comentarios</a>
+          <h2>9.9</h2><p>999 votos</p>
+          <a href="drprofile.html#tabcomments">5 comentarios</a>
         </div>
         <div class="book-cta">
-          <a href="#">Mostrar Telefono</a>
+          <a data-fancybox data-src="#phoneModal1" data-modal="true" href="javascript:;">
+            Mostrar Telefono</a>
           <button class="bg-color-warning">AGENDAR CITA</button>
+          <div id="phoneModal1" class="phone-modal-styles">
+            <h2>Teléfonos</h2>
+            <p>Recuerda agendar en un horario de oficina</br>
+                <a href="tel:+523313981659">01 (33) 3333 3333</a></p>
+            <p>Teléfono para urgencias</br>
+                01 (33) 3333 3333</p>
+          </div>
         </div>
       </article>
       <article class="result">
-          <div class="image-result">
+        <div class="image-result">
+          <a href="drprofile.html">
             <img class="doctor-image" src="assets/images/drprofile.jpg" alt="">
-            <div class="likes-overlap"><h2>9.9</h2></div>
+          </a>
+          <div class="likes-overlap"><h2>9.9</h2></div>
+        </div>
+        <div class="title-result">
+          <h3><a href="drprofile.html">Dr. Leonardo Gutierrez Hernandez.</a></h3>
+          <h4>Otorrinolaringologo</h4><img src="assets/images/stars-5.svg" alt="">
+        </div>
+        <div class="location-mini-thumnails">
+          <div>
+            <p>
+              Encarnacion de Diaz, Jalisco. <br>
+              10 años de experiencia.
+            </p>
           </div>
-          <div class="title-result">
-            <h3>Dr. Leonardo Gutierrez Hernandez.</h3>
-            <h4>Otorrinolaringologo</h4><img src="assets/images/stars-5.svg" alt="">
+          <div class="mini-thumnails">
+            <img src="assets/images/galleryimg.jpg" alt="">
+            <img src="assets/images/galleryimg.jpg" alt="">
+            <img src="assets/images/galleryimg.jpg" alt="">
           </div>
-          <div class="location-mini-thumnails">
-            <div>
-              <p>
-                Encarnacion de Diaz, Jalisco. <br>
-                10 años de experiencia.
-              </p>
-            </div>
-            <div class="mini-thumnails">
-              <img src="assets/images/galleryimg.jpg" alt="">
-              <img src="assets/images/galleryimg.jpg" alt="">
-              <img src="assets/images/galleryimg.jpg" alt="">
-            </div>
+        </div>
+        <div class="score-result">
+          <img src="assets/images/like.svg" alt="">
+          <h2>9.9</h2><p>999 votos</p>
+          <a href="drprofile.html#tabcomments">5 comentarios</a>
+        </div>
+        <div class="book-cta">
+          <a data-fancybox data-src="#phoneModal1" data-modal="true" href="javascript:;">
+            Mostrar Telefono</a>
+          <button class="bg-color-warning">AGENDAR CITA</button>
+          <div id="phoneModal1" class="phone-modal-styles">
+            <h2>Teléfonos</h2>
+            <p>Recuerda agendar en un horario de oficina</br>
+                <a href="tel:+523313981659">01 (33) 3333 3333</a></p>
+            <p>Teléfono para urgencias</br>
+                01 (33) 3333 3333</p>
           </div>
-          <div class="score-result">
-            <img src="assets/images/like.svg" alt="">
-            <h2>9.9</h2><p>999 votos</p><br />
-            <a href="#">5 comentarios</a>
-          </div>
-          <div class="book-cta">
-            <a href="#">Mostrar Telefono</a>
-            <button class="bg-color-warning">AGENDAR CITA</button>
-          </div>
-        </article>
-      <article class="result">
-          <div class="image-result">
-            <img class="doctor-image" src="assets/images/drprofile.jpg" alt="">
-            <div class="likes-overlap"><h2>9.9</h2></div>
-          </div>
-          <div class="title-result">
-            <h3>Dr. Leonardo Gutierrez Hernandez.</h3>
-            <h4>Otorrinolaringologo</h4><img src="assets/images/stars-5.svg" alt="">
-          </div>
-          <div class="location-mini-thumnails">
-            <div>
-              <p>
-                Encarnacion de Diaz, Jalisco. <br>
-                10 años de experiencia.
-              </p>
-            </div>
-            <div class="mini-thumnails">
-              <img src="assets/images/galleryimg.jpg" alt="">
-              <img src="assets/images/galleryimg.jpg" alt="">
-              <img src="assets/images/galleryimg.jpg" alt="">
-            </div>
-          </div>
-          <div class="score-result">
-            <img src="assets/images/like.svg" alt="">
-            <h2>9.9</h2><p>999 votos</p><br />
-            <a href="#">5 comentarios</a>
-          </div>
-          <div class="book-cta">
-            <a href="#">Mostrar Telefono</a>
-            <button class="bg-color-warning">AGENDAR CITA</button>
-          </div>
-        </article>
+        </div>
+      </article>
     </section>
     <!-- Ads  -->
     <aside class="ad-sidebar">
@@ -523,6 +627,28 @@
 
           lastScrollTop = st;
       }
+  </script>
+  <!-- Sweet Alert import -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- Alerts for succeed reset / register -->
+  <script type="text/javascript">
+    function registerAlert() {
+      swal({
+  title: "Correo Enviado",
+  text: "Te hemos enviado un correo, sigue las instrucciones",
+  icon: "success",
+  button: "Entendido",
+});
+    }
+
+    function resetAlert() {
+      swal({
+  title: "Correo Enviado",
+  text: "Te hemos enviado un correo para recuperar tu contraseña.",
+  icon: "success",
+  button: "Regresar",
+});
+    }
   </script>
 </div>
 </body>
