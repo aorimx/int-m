@@ -1,0 +1,284 @@
+
+
+
+.title-booking {
+  width: 60%;
+
+  img {
+    display: inline-flex;
+    vertical-align: middle;
+    margin-bottom: $space-base;
+  }
+
+  h1 {
+    display: inline-flex;
+    font-size: 1.5em;
+    padding-left: $space-base;
+    margin-bottom: $space-base;
+  }
+  p {
+    display: block;
+  }
+}
+
+.title-booking-btns {
+  width: 40%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  .editar-booking-btn {
+    width: auto;
+    padding: $space-base;
+    font-size: .7em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: 1px solid $color-primary;
+    color: $color-primary;
+  }
+  .booking-btn {
+    max-width: 200px;
+    padding-top: $space-base;
+    padding-right: $space-2;
+    padding-bottom: $space-base;
+    padding-left: $space-2;
+  }
+}
+
+.booking-container{
+
+  input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+
+    &:checked {
+      + .booking-item {
+        border-left: 8px solid #A0DEF9;
+        background-color: #FDFDFD;
+        grid-template-columns: 1fr .2fr 2fr 1.5fr ;
+        grid-template-rows: .5fr 1.5fr;
+        grid-template-areas:
+        "hour time title btns "
+        ". . notes contact-info";
+
+        .hour {
+          h2 {
+            font-weight: 500;
+          }
+        }
+
+        .booking-notes {
+          visibility: visible;
+          opacity: 100;
+          height: auto;
+        }
+        .contact-info {
+          visibility: visible;
+          opacity: 100;
+          height: auto;
+        }
+      }
+    }
+  }
+  .booking-item {
+    display: grid;
+    padding-top: $space-2;
+    padding-bottom: $space-2;
+    margin-left: $space-4;
+    grid-template-columns: 1fr .2fr 2fr 1.5fr ;
+    grid-template-rows: .5fr .1fr;
+    grid-template-areas:
+    "hour time title btns "
+    ". . notes contact-info";
+    border-top: 2px solid $gray-ghost;
+    border-left: 8px solid transparent;
+    background-color: $white;
+
+    .hour {
+      display: flex;
+      justify-content: center;
+      grid-area: hour;
+
+      h2 {
+        font-size: 50px;
+        font-weight: 200;
+        margin: 0;
+        color: $gray-light;
+      }
+    }
+    .time{
+      display: flex;
+      justify-content: center;
+      grid-area: time;
+
+      p {
+        font-weight: bold;
+      }
+
+    }
+    .booking-patient-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      grid-area: title;
+
+      .booking-title-container {
+        display: flex;
+        flex-flow: column;
+
+        .booking-title {
+          display: flex;
+          align-items: baseline;
+
+          h3 {
+            text-transform: capitalize;
+            margin-right: $space-2;
+            margin-bottom: 0;
+          }
+
+          p {
+            font-size: 12px;
+            margin-bottom: 0;
+            color: $gray-light;
+          }
+        }
+        .booking-subtitle {
+          display: flex;
+          justify-content: space-between;
+
+          p {
+            font-size: 12px;
+            margin-right: $space-2;
+            margin-bottom: $space-2;
+          }
+        }
+      }
+      .booking-notes-btn {
+        display: flex;
+        justify-content: center;
+        padding-right: $space-2;
+
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-self: flex-end;
+          margin: 0;
+          padding: 0;
+
+        }
+
+        label {
+          padding: $space-base;
+          margin: 0;
+          font-weight: 600;
+          font-size: 14px;
+          letter-spacing: 1px;
+          cursor: pointer;
+        }
+      }
+
+    }
+    .booking-btns {
+      grid-area: btns;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .delay-btn {
+        width: auto;
+        padding: $space-base $space-2;
+        margin-bottom: 0;
+        margin-left: $space-2;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+
+      .contact-btn {
+        width: auto;
+        padding: 0;
+        margin-bottom: 0;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+      label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 1px;
+        cursor: pointer;
+
+        p {
+          margin: 0;
+          padding-top: $space-base;
+          padding-right: 48px;
+          padding-bottom: $space-base;
+          padding-left: $space-base;
+          color: $color-warning;
+
+          &:hover {
+            transition: all 10ms ease-in-out;
+            color: $white;
+            + svg {
+              g {
+                #booking-stroke {
+                  transition: all 10ms ease-in-out;
+                  stroke: $white;
+                }
+              }
+            }
+          }
+        }
+
+        svg {
+          padding-right: $space-base;
+          height: 10px;
+          width: auto;
+          position: absolute;
+          right: 0;
+        }
+      }
+      .booking-btn {
+        margin: 0;
+      }
+    }
+    .booking-notes {
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+      grid-area: notes;
+
+      h4 {
+        margin: 0;
+      }
+
+      p{
+        font-size: 12px;
+        line-height: 1;
+      }
+    }
+    .contact-info {
+      grid-area: contact-info;
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: flex-end;
+
+      p {
+        margin-right: $space-2;
+        background-color: $white;
+        min-width: 200px;
+      }
+    }
+  }
+}
