@@ -2391,12 +2391,11 @@ label[for="admin-nav-check"] {
 
 .main-container {
   min-height: 100%;
-  min-width: 100%;
   position: relative;
   top: 0;
   bottom: 100%;
   left: 200px;
-  padding-right: 48px;
+  margin-right: 48px;
   z-index: 3;
   transition: all .2s ease-in-out; }
   .main-container #info-box-selector {
@@ -2424,6 +2423,9 @@ label[for="admin-nav-check"] {
       margin-right: 0;
       margin-bottom: 0;
       margin-left: 8px; }
+      @media screen and (max-width: 600px) {
+        .main-container .info-box p {
+          font-size: 12px; } }
     .main-container .info-box img {
       margin-right: 16px;
       margin-bottom: 0;
@@ -2433,40 +2435,76 @@ label[for="admin-nav-check"] {
     flex-flow: row wrap;
     padding-top: 8px;
     padding-left: 16px; }
+    @media screen and (max-width: 600px) {
+      .main-container .main-content-wrapper {
+        padding-left: 8px; } }
     .main-container .main-content-wrapper .title-container {
       display: flex;
+      order: 1;
       justify-content: space-between;
       align-items: center;
       width: 100%; }
+      @media screen and (max-width: 600px) {
+        .main-container .main-content-wrapper .title-container {
+          flex-flow: column nowrap;
+          align-items: flex-start; } }
       .main-container .main-content-wrapper .title-container .title img {
         display: inline-flex;
         vertical-align: middle;
         margin-bottom: 8px; }
+        @media screen and (max-width: 900px) {
+          .main-container .main-content-wrapper .title-container .title img {
+            max-width: 30px; } }
       .main-container .main-content-wrapper .title-container .title h2 {
         display: inline-flex;
         margin-bottom: 8px;
         color: #F5A623; }
+        @media screen and (max-width: 900px) {
+          .main-container .main-content-wrapper .title-container .title h2 {
+            font-size: 1em; } }
       .main-container .main-content-wrapper .title-container .title h1 {
         display: inline-flex;
         font-size: 1.5em;
         padding-left: 8px;
         margin-bottom: 8px; }
+        @media screen and (max-width: 900px) {
+          .main-container .main-content-wrapper .title-container .title h1 {
+            font-size: 1em; } }
       .main-container .main-content-wrapper .title-container .title p {
         display: block; }
+        @media screen and (max-width: 900px) {
+          .main-container .main-content-wrapper .title-container .title p {
+            font-size: 12px; } }
       .main-container .main-content-wrapper .title-container .fecha {
         display: flex;
         flex-direction: column;
         align-items: flex-end; }
+        @media screen and (max-width: 600px) {
+          .main-container .main-content-wrapper .title-container .fecha {
+            align-self: flex-end; } }
         .main-container .main-content-wrapper .title-container .fecha h3 {
           font-size: 1em;
           margin-bottom: 0; }
+          @media screen and (max-width: 900px) {
+            .main-container .main-content-wrapper .title-container .fecha h3 {
+              font-size: .7em; } }
         .main-container .main-content-wrapper .title-container .fecha p {
           font-size: 12px; }
+          @media screen and (max-width: 900px) {
+            .main-container .main-content-wrapper .title-container .fecha p {
+              font-size: 10px; } }
     .main-container .main-content-wrapper .icons-container {
       display: flex;
+      order: 2;
       justify-content: space-around;
       width: 100%;
       margin-bottom: 16px; }
+      @media screen and (max-width: 600px) {
+        .main-container .main-content-wrapper .icons-container {
+          flex-flow: row wrap; } }
+      @media screen and (max-width: 600px) {
+        .main-container .main-content-wrapper .icons-container .home-icon {
+          width: 50%; } }
       .main-container .main-content-wrapper .icons-container .home-icon a {
         display: flex;
         flex-direction: column;
@@ -2481,12 +2519,20 @@ label[for="admin-nav-check"] {
         width: 2px;
         height: 150px;
         background-color: #f2f2f2; }
+        @media screen and (max-width: 600px) {
+          .main-container .main-content-wrapper .icons-container span {
+            display: none; } }
     .main-container .main-content-wrapper .newsfeed-container {
       display: flex;
+      order: 3;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
       width: 50%; }
+      @media screen and (max-width: 600px) {
+        .main-container .main-content-wrapper .newsfeed-container {
+          order: 4;
+          width: 100%; } }
       .main-container .main-content-wrapper .newsfeed-container .newsfeed-title {
         display: flex;
         flex-direction: row;
@@ -2574,26 +2620,56 @@ label[for="admin-nav-check"] {
                   align-self: flex-end; }
     .main-container .main-content-wrapper .agenda-container {
       display: flex;
+      order: 4;
       flex-direction: column;
       width: 50%; }
+      @media screen and (max-width: 600px) {
+        .main-container .main-content-wrapper .agenda-container {
+          order: 3;
+          width: 100%; } }
       .main-container .main-content-wrapper .agenda-container .agenda-title {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         padding-top: 8px;
         padding-bottom: 8px; }
+        @media screen and (max-width: 600px) {
+          .main-container .main-content-wrapper .agenda-container .agenda-title {
+            justify-content: space-around; } }
         .main-container .main-content-wrapper .agenda-container .agenda-title button {
           width: 35%;
           margin-left: 32px;
           padding: 8px;
           font-size: 0.8em; }
+          @media screen and (max-width: 900px) {
+            .main-container .main-content-wrapper .agenda-container .agenda-title button {
+              width: 40%;
+              font-size: 0.7em;
+              padding-left: 16px; } }
+          @media screen and (max-width: 600px) {
+            .main-container .main-content-wrapper .agenda-container .agenda-title button {
+              padding-left: 8px;
+              margin-left: 8px; } }
         .main-container .main-content-wrapper .agenda-container .agenda-title .search {
           width: 45%;
           position: relative;
           margin-left: 24px; }
+          @media screen and (max-width: 900px) {
+            .main-container .main-content-wrapper .agenda-container .agenda-title .search {
+              width: 35%;
+              margin-left: 16px; } }
+          @media screen and (max-width: 600px) {
+            .main-container .main-content-wrapper .agenda-container .agenda-title .search {
+              margin-left: 8px; } }
           .main-container .main-content-wrapper .agenda-container .agenda-title .search input {
             text-indent: 32px;
             border-radius: 8px; }
+            @media screen and (max-width: 900px) {
+              .main-container .main-content-wrapper .agenda-container .agenda-title .search input {
+                min-width: 100px; } }
+            @media screen and (max-width: 600px) {
+              .main-container .main-content-wrapper .agenda-container .agenda-title .search input {
+                min-width: 120px; } }
           .main-container .main-content-wrapper .agenda-container .agenda-title .search span {
             display: flex;
             align-items: center;
@@ -2607,6 +2683,13 @@ label[for="admin-nav-check"] {
       .main-container .main-content-wrapper .agenda-container .agenda-content {
         margin-left: 24px;
         border-left: 1px solid #d9d9d9; }
+        @media screen and (max-width: 900px) {
+          .main-container .main-content-wrapper .agenda-container .agenda-content {
+            margin-left: 8px; } }
+        @media screen and (max-width: 600px) {
+          .main-container .main-content-wrapper .agenda-container .agenda-content {
+            margin-left: 0;
+            border: none; } }
         .main-container .main-content-wrapper .agenda-container .agenda-content input {
           position: absolute;
           clip: rect(0, 0, 0, 0); }
@@ -2635,7 +2718,19 @@ label[for="admin-nav-check"] {
           margin-left: 32px;
           padding-top: 32px;
           padding-left: 16px;
-          border-left: 4px solid transparent; }
+          border-left: 4px solid transparent;
+          transition: all 200ms ease-in-out; }
+          @media screen and (max-width: 900px) {
+            .main-container .main-content-wrapper .agenda-container .agenda-content .agenda-item {
+              margin-top: 0;
+              margin-bottom: 8px;
+              margin-left: 8px;
+              padding-top: 16px;
+              padding-left: 8px; } }
+          @media screen and (max-width: 600px) {
+            .main-container .main-content-wrapper .agenda-container .agenda-content .agenda-item {
+              margin-left: 0;
+              padding-left: 0; } }
           .main-container .main-content-wrapper .agenda-container .agenda-content .agenda-item .hr-delay {
             display: flex;
             flex-flow: column nowrap;
@@ -2650,6 +2745,10 @@ label[for="admin-nav-check"] {
               margin-top: 16px;
               margin-bottom: 8px;
               transition: all 500ms ease-in-out; }
+              @media screen and (max-width: 900px) {
+                .main-container .main-content-wrapper .agenda-container .agenda-content .agenda-item .hr-delay h3 {
+                  font-size: 2.5em;
+                  margin-top: 0; } }
             .main-container .main-content-wrapper .agenda-container .agenda-content .agenda-item .hr-delay button {
               width: auto;
               margin-bottom: 0;
@@ -2658,6 +2757,9 @@ label[for="admin-nav-check"] {
               padding-bottom: 8px;
               padding-left: 16px;
               letter-spacing: 2px; }
+              @media screen and (max-width: 900px) {
+                .main-container .main-content-wrapper .agenda-container .agenda-content .agenda-item .hr-delay button {
+                  font-size: .8em; } }
           .main-container .main-content-wrapper .agenda-container .agenda-content .agenda-item .name-contact {
             display: flex;
             flex-flow: column nowrap;
@@ -2665,22 +2767,36 @@ label[for="admin-nav-check"] {
             align-items: flex-end;
             width: 50%;
             padding-right: 16px; }
+            @media screen and (max-width: 900px) {
+              .main-container .main-content-wrapper .agenda-container .agenda-content .agenda-item .name-contact {
+                padding-right: 8px; } }
             .main-container .main-content-wrapper .agenda-container .agenda-content .agenda-item .name-contact h3 {
               margin-top: 16px;
               margin-bottom: 0;
               line-height: 1; }
+              @media screen and (max-width: 900px) {
+                .main-container .main-content-wrapper .agenda-container .agenda-content .agenda-item .name-contact h3 {
+                  margin-top: 0;
+                  font-size: 1em; } }
+            @media screen and (max-width: 900px) {
+              .main-container .main-content-wrapper .agenda-container .agenda-content .agenda-item .name-contact p {
+                font-size: 12px;
+                line-height: 1;
+                margin-bottom: 8px; } }
             .main-container .main-content-wrapper .agenda-container .agenda-content .agenda-item .name-contact button {
               display: flex;
               justify-content: center;
               align-items: center;
               align-self: flex-end;
               margin: 0;
-              padding: 0;
-              width: 200px; }
+              padding: 0; }
               .main-container .main-content-wrapper .agenda-container .agenda-content .agenda-item .name-contact button label {
                 padding: 8px;
                 margin: 0;
                 cursor: pointer; }
+                @media screen and (max-width: 900px) {
+                  .main-container .main-content-wrapper .agenda-container .agenda-content .agenda-item .name-contact button label {
+                    font-size: .8em; } }
           .main-container .main-content-wrapper .agenda-container .agenda-content .agenda-item .name-contact-info {
             display: flex;
             flex-flow: column nowrap;
@@ -2691,7 +2807,7 @@ label[for="admin-nav-check"] {
             visibility: hidden;
             opacity: 0;
             height: 0;
-            transition: all 800ms ease-in-out; }
+            transition: all 200ms ease-in-out; }
             .main-container .main-content-wrapper .agenda-container .agenda-content .agenda-item .name-contact-info p {
               width: 180px;
               margin-top: 0;
@@ -2700,21 +2816,33 @@ label[for="admin-nav-check"] {
               margin-left: 0;
               background-color: #ffffff;
               padding-right: 24px;
-              transition: all 200ms ease-in-out; }
+              transition: all 100ms ease-in-out; }
 
 .title-booking {
   width: 60%; }
+  @media screen and (max-width: 600px) {
+    .title-booking {
+      width: 100%; } }
   .title-booking img {
     display: inline-flex;
     vertical-align: middle;
     margin-bottom: 8px; }
+    @media screen and (max-width: 900px) {
+      .title-booking img {
+        max-width: 30px; } }
   .title-booking h1 {
     display: inline-flex;
     font-size: 1.5em;
     padding-left: 8px;
     margin-bottom: 8px; }
+    @media screen and (max-width: 900px) {
+      .title-booking h1 {
+        font-size: 1em; } }
   .title-booking p {
     display: block; }
+    @media screen and (max-width: 900px) {
+      .title-booking p {
+        font-size: 12px; } }
 
 .title-booking-btns {
   width: 40%;
@@ -2722,6 +2850,10 @@ label[for="admin-nav-check"] {
   flex-flow: column nowrap;
   align-items: flex-end;
   justify-content: space-between; }
+  @media screen and (max-width: 600px) {
+    .title-booking-btns {
+      width: 100%;
+      align-items: center; } }
   .title-booking-btns .editar-booking-btn {
     width: auto;
     padding: 8px;
@@ -2730,12 +2862,19 @@ label[for="admin-nav-check"] {
     letter-spacing: 1px;
     border: 1px solid #6A696A;
     color: #6A696A; }
+    @media screen and (max-width: 900px) {
+      .title-booking-btns .editar-booking-btn {
+        font-size: .5em; } }
   .title-booking-btns .booking-btn {
     max-width: 200px;
     padding-top: 8px;
     padding-right: 16px;
     padding-bottom: 8px;
     padding-left: 16px; }
+    @media screen and (max-width: 900px) {
+      .title-booking-btns .booking-btn {
+        font-size: .5em;
+        max-width: 150px; } }
 
 .booking-container input {
   position: absolute;
@@ -2746,6 +2885,11 @@ label[for="admin-nav-check"] {
     grid-template-columns: 1fr 0.2fr 2fr 1.5fr;
     grid-template-rows: .5fr 1.5fr;
     grid-template-areas: "hour time title btns " ". . notes contact-info"; }
+    @media screen and (max-width: 600px) {
+      .booking-container input:checked + .booking-item {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "hour" "title" "notes" "btns" "contact-info"; } }
     .booking-container input:checked + .booking-item .hour h2 {
       font-weight: 500; }
     .booking-container input:checked + .booking-item .booking-notes {
@@ -2767,6 +2911,15 @@ label[for="admin-nav-check"] {
   border-top: 2px solid #f2f2f2;
   border-left: 8px solid transparent;
   background-color: #ffffff; }
+  @media screen and (max-width: 900px) {
+    .booking-container .booking-item {
+      margin-left: 8px; } }
+  @media screen and (max-width: 600px) {
+    .booking-container .booking-item {
+      padding-left: 8px;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, auto);
+      grid-template-areas: "hour" "title" "notes" "btns" "contact-info"; } }
   .booking-container .booking-item .hour {
     display: flex;
     justify-content: center;
@@ -2776,12 +2929,21 @@ label[for="admin-nav-check"] {
       font-weight: 200;
       margin: 0;
       color: #a6a6a6; }
+      @media screen and (max-width: 900px) {
+        .booking-container .booking-item .hour h2 {
+          font-size: 30px; } }
   .booking-container .booking-item .time {
     display: flex;
     justify-content: center;
     grid-area: time; }
+    @media screen and (max-width: 600px) {
+      .booking-container .booking-item .time {
+        display: none; } }
     .booking-container .booking-item .time p {
       font-weight: bold; }
+      @media screen and (max-width: 900px) {
+        .booking-container .booking-item .time p {
+          font-size: 12px; } }
   .booking-container .booking-item .booking-patient-info {
     display: flex;
     flex-direction: row;
@@ -2798,10 +2960,16 @@ label[for="admin-nav-check"] {
           text-transform: capitalize;
           margin-right: 16px;
           margin-bottom: 0; }
+          @media screen and (max-width: 900px) {
+            .booking-container .booking-item .booking-patient-info .booking-title-container .booking-title h3 {
+              font-size: .7em; } }
         .booking-container .booking-item .booking-patient-info .booking-title-container .booking-title p {
           font-size: 12px;
           margin-bottom: 0;
           color: #a6a6a6; }
+          @media screen and (max-width: 900px) {
+            .booking-container .booking-item .booking-patient-info .booking-title-container .booking-title p {
+              font-size: 10px; } }
       .booking-container .booking-item .booking-patient-info .booking-title-container .booking-subtitle {
         display: flex;
         justify-content: space-between; }
@@ -2809,10 +2977,16 @@ label[for="admin-nav-check"] {
           font-size: 12px;
           margin-right: 16px;
           margin-bottom: 16px; }
+          @media screen and (max-width: 900px) {
+            .booking-container .booking-item .booking-patient-info .booking-title-container .booking-subtitle p {
+              font-size: 10px; } }
     .booking-container .booking-item .booking-patient-info .booking-notes-btn {
       display: flex;
       justify-content: center;
       padding-right: 16px; }
+      @media screen and (max-width: 900px) {
+        .booking-container .booking-item .booking-patient-info .booking-notes-btn {
+          padding-right: 8px; } }
       .booking-container .booking-item .booking-patient-info .booking-notes-btn button {
         display: flex;
         justify-content: center;
@@ -2824,13 +2998,18 @@ label[for="admin-nav-check"] {
         padding: 8px;
         margin: 0;
         font-weight: 600;
+        min-width: 70px;
         font-size: 14px;
         letter-spacing: 1px;
         cursor: pointer; }
+        @media screen and (max-width: 900px) {
+          .booking-container .booking-item .booking-patient-info .booking-notes-btn label {
+            min-width: 55px;
+            font-size: 10px; } }
   .booking-container .booking-item .booking-btns {
     grid-area: btns;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center; }
     .booking-container .booking-item .booking-btns .delay-btn {
       width: auto;
@@ -2840,6 +3019,11 @@ label[for="admin-nav-check"] {
       font-weight: 600;
       font-size: 14px;
       letter-spacing: 1px; }
+      @media screen and (max-width: 900px) {
+        .booking-container .booking-item .booking-btns .delay-btn {
+          padding: 8px 8px;
+          margin-left: 0;
+          font-size: 10px; } }
     .booking-container .booking-item .booking-btns .contact-btn {
       width: auto;
       padding: 0;
@@ -2856,6 +3040,9 @@ label[for="admin-nav-check"] {
       font-size: 14px;
       letter-spacing: 1px;
       cursor: pointer; }
+      @media screen and (max-width: 900px) {
+        .booking-container .booking-item .booking-btns label {
+          font-size: 10px; } }
       .booking-container .booking-item .booking-btns label p {
         margin: 0;
         padding-top: 8px;
@@ -2863,6 +3050,9 @@ label[for="admin-nav-check"] {
         padding-bottom: 8px;
         padding-left: 8px;
         color: #F5A623; }
+        @media screen and (max-width: 900px) {
+          .booking-container .booking-item .booking-btns label p {
+            padding-right: 8px; } }
         .booking-container .booking-item .booking-btns label p:hover {
           transition: all 10ms ease-in-out;
           color: #ffffff; }
@@ -2875,8 +3065,20 @@ label[for="admin-nav-check"] {
         width: auto;
         position: absolute;
         right: 0; }
+        @media screen and (max-width: 900px) {
+          .booking-container .booking-item .booking-btns label svg {
+            display: none; } }
     .booking-container .booking-item .booking-btns .booking-btn {
       margin: 0; }
+      @media screen and (max-width: 900px) {
+        .booking-container .booking-item .booking-btns .booking-btn {
+          font-size: 14px;
+          padding: 8px; } }
+      @media screen and (max-width: 600px) {
+        .booking-container .booking-item .booking-btns .booking-btn {
+          font-size: 12px;
+          padding: 8px;
+          margin-top: 8px; } }
   .booking-container .booking-item .booking-notes {
     visibility: hidden;
     opacity: 0;
@@ -2900,6 +3102,9 @@ label[for="admin-nav-check"] {
       margin-right: 16px;
       background-color: #ffffff;
       min-width: 200px; }
+      @media screen and (max-width: 900px) {
+        .booking-container .booking-item .contact-info p {
+          min-width: 150px; } }
 
 .bkt-strengths {
   padding: 64px;
