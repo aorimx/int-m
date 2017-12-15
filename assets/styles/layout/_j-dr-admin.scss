@@ -273,12 +273,11 @@ label[for="admin-nav-check"] {
 
 .main-container {
   min-height: 100%;
-  min-width: 100%;
   position: relative;
   top: 0;
   bottom: 100%;
   left: 200px;
-  padding-right: 48px;
+  margin-right: 48px;
   z-index: 3;
   transition: all .2s ease-in-out;
 
@@ -311,6 +310,9 @@ label[for="admin-nav-check"] {
       margin-right: 0;
       margin-bottom: 0;
       margin-left: $space-base;
+      @media screen and (max-width: $mobile){
+        font-size: 12px;
+      }
     }
 
     img {
@@ -325,24 +327,38 @@ label[for="admin-nav-check"] {
     flex-flow: row wrap;
     padding-top: $space-base;
     padding-left: $space-2;
+    @media screen and (max-width: $mobile){
+      padding-left: $space-base;
+    }
 
     .title-container {
       display: flex;
+      order: 1;
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      @media screen and (max-width: $mobile){
+        flex-flow: column nowrap;
+        align-items: flex-start;
+      }
       .title {
 
         img {
           display: inline-flex;
           vertical-align: middle;
           margin-bottom: $space-base;
+          @media screen and (max-width: $tablet){
+            max-width: 30px;
+          }
         }
 
         h2 {
           display: inline-flex;
           margin-bottom : $space-base;
           color: $color-warning;
+          @media screen and (max-width: $tablet){
+            font-size: 1em;
+          }
         }
 
         h1 {
@@ -350,32 +366,54 @@ label[for="admin-nav-check"] {
           font-size: 1.5em;
           padding-left: $space-base;
           margin-bottom: $space-base;
+          @media screen and (max-width: $tablet){
+            font-size: 1em;
+          }
         }
         p {
           display: block;
+          @media screen and (max-width: $tablet){
+            font-size: 12px;
+          }
         }
       }
       .fecha {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        @media screen and (max-width: $mobile){
+          align-self: flex-end;
+        }
 
         h3 {
           font-size: 1em;
           margin-bottom: 0;
+          @media screen and (max-width: $tablet){
+            font-size: .7em;
+          }
         }
         p {
           font-size: 12px;
+          @media screen and (max-width: $tablet){
+            font-size: 10px;
+          }
         }
       }
     }
     .icons-container {
       display: flex;
+      order: 2;
       justify-content: space-around;
       width: 100%;
       margin-bottom: $space-2;
+      @media screen and (max-width: $mobile){
+        flex-flow: row wrap;
+      }
 
       .home-icon {
+        @media screen and (max-width: $mobile){
+          width: 50%;
+        }
 
         a {
           display: flex;
@@ -395,14 +433,22 @@ label[for="admin-nav-check"] {
         width: 2px;
         height: 150px;
         background-color: $gray-ghost;
+        @media screen and (max-width: $mobile){
+          display: none;
+        }
       }
     }
     .newsfeed-container {
       display: flex;
+      order: 3;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
       width: 50%;
+      @media screen and (max-width: $mobile){
+        order: 4;
+        width: 100%;
+      }
 
       .newsfeed-title {
         display: flex;
@@ -528,8 +574,13 @@ label[for="admin-nav-check"] {
     }
     .agenda-container {
       display: flex;
+      order: 4;
       flex-direction: column;
       width: 50%;
+      @media screen and (max-width: $mobile){
+        order: 3;
+        width: 100%;
+      }
 
       .agenda-title {
         display: flex;
@@ -537,22 +588,48 @@ label[for="admin-nav-check"] {
         justify-content: space-between;
         padding-top: $space-base;
         padding-bottom: $space-base;
+        @media screen and (max-width: $mobile){
+          justify-content: space-around;
+        }
 
         button {
           width: 35%;
           margin-left: $space-4;
           padding: $space-base;
-          font-size: 0.8em
+          font-size: 0.8em;
+          @media screen and (max-width: $tablet){
+            width: 40%;
+            font-size: 0.7em;
+            padding-left:  $space-2;
+          }
+          @media screen and (max-width: $mobile){
+            padding-left: $space-base;
+            margin-left: $space-base;
+          }
         }
 
         .search {
           width: 45%;
           position: relative;
           margin-left: $space-3;
+          @media screen and (max-width: $tablet){
+            width: 35%;
+            margin-left: $space-2;
+          }
+          @media screen and (max-width: $mobile){
+            margin-left: $space-base;
+          }
 
           input{
             text-indent: 32px;
             border-radius: 8px;
+            @media screen and (max-width: $tablet){
+              min-width: 100px;
+            }
+            @media screen and (max-width: $mobile){
+              min-width: 120px;
+            }
+
           }
           span {
             display: flex;
@@ -572,6 +649,14 @@ label[for="admin-nav-check"] {
       .agenda-content {
         margin-left: $space-3;
         border-left: 1px solid $gray-lighter;
+        @media screen and (max-width: $tablet){
+          margin-left: $space-base;
+        }
+        @media screen and (max-width: $mobile){
+          margin-left: 0;
+          border: none;
+        }
+
 
         input {
           position: absolute;
@@ -617,6 +702,19 @@ label[for="admin-nav-check"] {
           padding-top: $space-4;
           padding-left: $space-2;
           border-left: 4px solid transparent;
+          transition: all 200ms ease-in-out;
+          @media screen and (max-width: $tablet){
+            margin-top: 0;
+            margin-bottom: $space-base;
+            margin-left: $space-base;
+            padding-top: $space-2;
+            padding-left: $space-base;
+
+          }
+          @media screen and (max-width: $mobile){
+            margin-left: 0;
+            padding-left: 0;
+          }
 
           .hr-delay {
             display: flex;
@@ -633,6 +731,10 @@ label[for="admin-nav-check"] {
               margin-top: $space-2;
               margin-bottom: $space-base;
               transition: all 500ms ease-in-out;
+              @media screen and (max-width: $tablet){
+                font-size: 2.5em;
+                margin-top:  0;
+              }
             }
 
             button {
@@ -643,6 +745,9 @@ label[for="admin-nav-check"] {
               padding-bottom: $space-base;
               padding-left: $space-2;
               letter-spacing: 2px;
+              @media screen and (max-width: $tablet){
+                font-size: .8em;
+              }
             }
           }
           .name-contact {
@@ -652,11 +757,26 @@ label[for="admin-nav-check"] {
             align-items: flex-end;
             width: 50%;
             padding-right: $space-2;
+            @media screen and (max-width: $tablet){
+              padding-right: $space-base;
+            }
 
             h3 {
               margin-top: $space-2;
               margin-bottom: 0;
               line-height: 1;
+              @media screen and (max-width: $tablet){
+                margin-top: 0;
+                font-size: 1em;
+              }
+            }
+
+            p {
+              @media screen and (max-width: $tablet){
+                font-size: 12px;
+                line-height: 1;
+                margin-bottom: $space-base;
+              }
             }
             button {
               display: flex;
@@ -665,12 +785,14 @@ label[for="admin-nav-check"] {
               align-self: flex-end;
               margin: 0;
               padding: 0;
-              width: 200px;
 
               label {
                 padding: $space-base;
                 margin: 0;
                 cursor: pointer;
+                @media screen and (max-width: $tablet) {
+                  font-size: .8em;
+                }
               }
             }
           }
@@ -684,7 +806,7 @@ label[for="admin-nav-check"] {
             visibility: hidden;
             opacity: 0;
             height: 0;
-            transition: all 800ms ease-in-out;
+            transition: all 200ms ease-in-out;
 
             p {
               width: 180px;
@@ -694,7 +816,7 @@ label[for="admin-nav-check"] {
               margin-left: 0;
               background-color: $white;
               padding-right: $space-3;
-              transition: all 200ms ease-in-out;
+              transition: all 100ms ease-in-out;
             }
           }
         }
