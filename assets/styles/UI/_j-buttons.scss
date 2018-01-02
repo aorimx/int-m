@@ -163,6 +163,24 @@ button, .btn-solid {
     }
   }
 }
+
+// Outlined gray button
+.outline-gray-btn {
+  width: auto;
+  font-size: 12px;
+  color: $gray-light;
+  padding: $space-base;
+  margin: 0;
+  background-color: transparent;
+  border: 1px solid $gray-light;
+
+  &:hover {
+    color: $white;
+    background-color: $gray-light;
+  }
+
+}
+
 // Containers for buttons
 .horizontal-btn-group {
   display: flex;

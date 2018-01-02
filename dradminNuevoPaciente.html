@@ -15,21 +15,6 @@
 </head>
 
 <body class="body-admin">
-<div class="modal-type2" id="modal-delay" >
-  <div class="modal-delay-style">
-    <h3>¿Demorado?</h3>
-    <p>Recuerda que al atrasar esta cita, las siguientes citas del día se retrasaran como consecuencia.</p>
-    <p>Un mensaje será enviado a los pacientes para que sepan que su cita cambió de horario.</p>
-    <p>Tiempo de retraso</p>
-    <select class="" name="retraso-select">
-      <option value="10minutos">10 minutos</option>
-      <option value="15minutos">15 minutos</option>
-      <option value="30minutos">30 minutos</option>
-      <option value="45minutos">45 minutos</option>
-    </select>
-      <button type="button" class="bg-color-warning" onclick="$.fancybox.close();delayAlert()" name="retrasar-btn">retrasar</button>
-  </div>
-</div>
 <div class="j-wrap-admin">
 <input type="checkbox" class="admin-nav-check" id="admin-nav-check" checked/>
   <aside class="dr-admin-nav">
@@ -53,7 +38,7 @@
             </svg>
           </li>
         </a>
-        <a href="#">
+        <a href="dradminAgenda.html">
           <li>
             <h2>agenda</h2>
             <svg width="20px" height="21px" viewBox="0 0 20 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -68,7 +53,7 @@
             </svg>
           </li>
         </a>
-        <a href="dradminPacientes.html">
+        <a href="#">
           <li>
             <h2>pacientes</h2>
             <svg width="23px" height="22px" viewBox="0 0 23 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -155,303 +140,101 @@
     </div>
   </aside>
   <label for="admin-nav-check"><span></span></label>
-<div class="main-container">
-    <input type="radio" name="info-box-selector" id="info-box-selector">
+  <div class="main-container">
+    <input class="selector patient-item-selector" type="radio" name="info-box-selector" id="info-box-selector">
     <div class="info-box">
         <p>Aprovecha el 20% en la renovación de tu membresía de Intermed dando click <a href="#">Aqui</a></p>
         <label for="info-box-selector">
         <img src="assets/images/x-icon.svg" alt="">
         </label>
-      </div>
+    </div>
     <div class="main-content-wrapper">
-      <div class="title-container">
-        <div class="title-booking">
-          <img src="assets/images/experience-icon.svg" alt="">
-          <h1>AGENDA</h1>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+      <div class="newpatient-head">
+        <div class="head">
+          <span><img src="assets/images/experience-icon.svg" alt=""></span>
+          <span><h1>Expedientes</h1>
+          <h2>de consulta</h2></span>
         </div>
-        <div class="title-booking-btns">
-          <button class="btn-outline editar-booking-btn" type="button" name="editar">editar</button>
-          <button class="bg-color-warning booking-btn" type="button" name="agendar-cita">agendar cita</button>
-          <div class="fecha">
-            <h3>Jueves</h3>
-            <p>06 / Septiembre / 2017</p>
-          </div>
+        <div class="newpatient-head-title">
+          <h1>Nuevo paciente</h1>
+          <h2>Expedientes</h2>
         </div>
+        <div class="newpatient-head-date">
+          <p>Jueves</p>
+          <p>06 / Septiembre / 2017</p>
+        </div>
+      </div>
+      <div class="newpatient-title">
+        <h2>02</h2>
+        <span>
+          <h3>Configuracion de Nuevo Expediente</h3>
+          <p>Nuestro expediente esta basado en la MON-004 de la normaoficial mexicana, es una adaptación
+            de algunasde los sub-categorías que aplican para el seguimiento de un expediente médico para
+            médico particular. </p>
+        </span>
+      </div>
+      <p>Para Habilitar las secciones de click en el recuadro:</p>
+      <div class="newpatient-options">
+      <span>
+
+        <input id="newpatient-option1" type="checkbox" name="newpatient-options" value="">
+        <label for="newpatient-option1">D2 Historia Clinica</label>
+        <input id="newpatient-option2" type="checkbox" name="newpatient-options" value="">
+        <label for="newpatient-option2">D4 Especificaciones de las notas médicas (D4-D11) x Notas de Urgencias (NU)</label>
+        <input id="newpatient-option3" type="checkbox" name="newpatient-options" value="">
+        <label for="newpatient-option3">D7 Notas de Interconsulta</label>
+        <input id="newpatient-option4" type="checkbox" name="newpatient-options" value="">
+        <label for="newpatient-option4">D8 Nota de Pre-Operatoria (NPE-O)</label>
+      </span>
+      <span>
+        <input id="newpatient-option5" type="checkbox" name="newpatient-options" value="">
+        <label for="newpatient-option5">D10 Notas Post-Operatoria</label>
+        <input id="newpatient-option6" type="checkbox" name="newpatient-options" value="">
+        <label for="newpatient-option6">D14 De los servicios auxiliares de Diagnóstico y Tratamiento</label>
+        <input id="newpatient-option7" type="checkbox" name="newpatient-options" value="">
+        <label for="newpatient-option7">17 Carta de Consentimiento Informado</label>
+      </span>
+      </div>
+      <div class="clinic-history-form">
+        <h3>D2 Historia Clinica</h3>
+        <span>
+          <label for="newpatient-form1">Ficha de identificación</label>
+          <input id="newpatient-form1" type="text" name="newpatient-form" value="">
+          <label for="newpatient-form1">Antecedentes heredo familiar</label>
+          <input id="newpatient-form1" type="text" name="newpatient-form" value="">
+          <label for="newpatient-form1">Antecedentes personales no patologicos</label>
+          <input id="newpatient-form1" type="text" name="newpatient-form" value="">
+          <label for="newpatient-form1">Antecedentes personales patologicos</label>
+          <input id="newpatient-form1" type="text" name="newpatient-form" value="">
+          <label for="newpatient-form1">Padecimiento Actual</label>
+          <input id="newpatient-form1" type="text" name="newpatient-form" value="">
+          <label for="newpatient-form1">Interrogatorio por aparatos y sistemas</label>
+          <input id="newpatient-form1" type="text" name="newpatient-form" value="">
+          <label for="newpatient-form1">Exploracion Fisica</label>
+          <input id="newpatient-form1" type="text" name="newpatient-form" value="">
+          <label for="newpatient-form1">Resultados previos y actuales de estudios de laboratorios, gabinete y otros</label>
+          <input id="newpatient-form1" type="text" name="newpatient-form" value="">
+          <label for="newpatient-form1">Terapéutica empleada y resultados obtenidos</label>
+          <input id="newpatient-form1" type="text" name="newpatient-form" value="">
+          <label for="newpatient-form1">Dianóstico(s) o problemas clínicos</label>
+          <input id="newpatient-form1" type="text" name="newpatient-form" value="">
+          <label for="newpatient-form1">Nombre completo, cédula profesional y firma del médico</label>
+          <input id="newpatient-form1" type="text" name="newpatient-form" value="">
+          <button class="btn-outline bg-color-warning"type="button" name="button">Guardar</button>
+        </span>
+        <h3>D10 Nota Post-Operatoria</h3>
+        <span>
+          <label for="newpatient-form1">Ficha de identificación</label>
+          <input id="newpatient-form1" type="text" name="newpatient-form" value="">
+          <label for="newpatient-form1">Antecedentes heredo familiar</label>
+          <input id="newpatient-form1" type="text" name="newpatient-form" value="">
+          <label for="newpatient-form1">Antecedentes personales no patologicos</label>
+          <input id="newpatient-form1" type="text" name="newpatient-form" value="">
+          <button class="btn-outline bg-color-warning"type="button" name="button">Guardar</button>
+        </span>
       </div>
     </div>
-    <div class="booking-container">
-      <input type="checkbox" name="booking-itemselect1" id="agenda-itemselect1">
-      <div class="booking-item">
-        <div class="hour">
-          <h2>09:00</h2>
-        </div>
-        <div class="time">
-          <p>01m</p>
-        </div>
-        <div class="booking-patient-info">
-          <div class="booking-title-container">
-            <div class="booking-title">
-              <h3>Guillermina Gutierrez</h3>
-              <p>Revision Mensual</p>
-            </div>
-            <div class="booking-subtitle">
-              <p>Consultorio Personal</p>
-              <p>Sin Seguro</p>
-            </div>
-          </div>
-          <div class="booking-notes-btn">
-            <button type="button" class="btn-outline bg-color-primary" name="notes">
-              <label for="agenda-itemselect1">Notas</label></button>
-          </div>
-        </div>
-        <div class="booking-btns">
-          <a data-fancybox data-src="#modal-delay" data-modal="true" href="javascript:;">
-            <button type="button" class="delay-btn btn-outline bg-color-primary" name="button">
-              retrasar
-            </button>
-          </a>
-          <button type="button" class="contact-btn btn-outline bg-color-warning" name="contactar">
-            <label for="agenda-itemselect1"><p>contactar</p>
-              <svg viewBox="0 0 11 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <defs></defs>
-                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                      <g id="booking-stroke" transform="translate(-1156.000000, -319.000000)" stroke="#F5A623" stroke-width="2">
-                          <g transform="translate(275.000000, 291.000000)">
-                              <g transform="translate(748.000000, 16.000000)">
-                                  <polyline id="Page-1-Copy-3" transform="translate(138.500000, 15.250000) rotate(-90.000000) translate(-138.500000, -15.250000) " points="140.75 19.75 136.25 15.25 140.75 10.75"></polyline>
-                              </g>
-                          </g>
-                      </g>
-                  </g>
-              </svg>
-            </label></button>
-        </div>
-        <div class="booking-notes">
-          <h4>Notas del Paciente:</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-        </div>
-        <div class="contact-info">
-          <p>Telefono</p>
-          <p>Correo</p>
-        </div>
-      </div>
-      <input type="checkbox" name="booking-itemselect2" id="agenda-itemselect2">
-      <div class="booking-item">
-        <div class="hour">
-          <h2>09:00</h2>
-        </div>
-        <div class="time">
-          <p>01m</p>
-        </div>
-        <div class="booking-patient-info">
-          <div class="booking-title-container">
-            <div class="booking-title">
-              <h3>Guillermina Gutierrez</h3>
-              <p>Revision Mensual</p>
-            </div>
-            <div class="booking-subtitle">
-              <p>Consultorio Personal</p>
-              <p>Con Seguro</p>
-            </div>
-          </div>
-          <div class="booking-notes-btn">
-            <button type="button" class="btn-outline bg-color-primary" name="notes">
-              <label for="agenda-itemselect2">Notas</label></button>
-          </div>
-        </div>
-        <div class="booking-btns">
-          <a data-fancybox data-src="#modal-delay" data-modal="true" href="javascript:;">
-            <button type="button" class="delay-btn btn-outline bg-color-primary" name="button">
-              retrasar
-            </button>
-          </a>
-          <button type="button" class="contact-btn btn-outline bg-color-warning" name="contactar">
-            <label for="agenda-itemselect2"><p>contactar</p>
-              <svg viewBox="0 0 11 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <defs></defs>
-                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                      <g id="booking-stroke" transform="translate(-1156.000000, -319.000000)" stroke="#F5A623" stroke-width="2">
-                          <g transform="translate(275.000000, 291.000000)">
-                              <g transform="translate(748.000000, 16.000000)">
-                                  <polyline id="Page-1-Copy-3" transform="translate(138.500000, 15.250000) rotate(-90.000000) translate(-138.500000, -15.250000) " points="140.75 19.75 136.25 15.25 140.75 10.75"></polyline>
-                              </g>
-                          </g>
-                      </g>
-                  </g>
-              </svg>
-            </label></button>
-        </div>
-        <div class="booking-notes">
-          <h4>Notas del Paciente:</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-        </div>
-        <div class="contact-info">
-          <p>Telefono</p>
-          <p>Correo</p>
-        </div>
-      </div>
-      <input type="checkbox" name="booking-itemselect1" id="agenda-itemselect3">
-      <div class="booking-item">
-        <div class="hour">
-          <h2>10:30</h2>
-        </div>
-        <div class="time">
-          <p>10s</p>
-        </div>
-        <div class="booking-patient-info">
-          <div class="booking-title-container">
-            <div class="booking-title">
-              <h3>Lorena Sanchez</h3>
-              <p>1era Cita</p>
-            </div>
-            <div class="booking-subtitle">
-              <p>Consultorio Personal</p>
-              <p>Con Seguro</p>
-            </div>
-          </div>
-          <div class="booking-notes-btn">
-            <button type="button" class="btn-outline bg-color-primary" name="notes">
-              <label for="agenda-itemselect3">Notas</label></button>
-          </div>
-        </div>
-        <div class="booking-btns">
-          <a data-fancybox data-src="#modal-delay" data-modal="true" href="javascript:;">
-            <button type="button" class="delay-btn btn-outline bg-color-primary" name="button">
-              retrasar
-            </button>
-          </a>
-          <button type="button" class="contact-btn btn-outline bg-color-warning" name="contactar">
-            <label for="agenda-itemselect3"><p>contactar</p>
-              <svg viewBox="0 0 11 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <defs></defs>
-                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                      <g id="booking-stroke" transform="translate(-1156.000000, -319.000000)" stroke="#F5A623" stroke-width="2">
-                          <g transform="translate(275.000000, 291.000000)">
-                              <g transform="translate(748.000000, 16.000000)">
-                                  <polyline id="Page-1-Copy-3" transform="translate(138.500000, 15.250000) rotate(-90.000000) translate(-138.500000, -15.250000) " points="140.75 19.75 136.25 15.25 140.75 10.75"></polyline>
-                              </g>
-                          </g>
-                      </g>
-                  </g>
-              </svg>
-            </label></button>
-        </div>
-        <div class="booking-notes">
-          <h4>Notas del Paciente:</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-        </div>
-        <div class="contact-info">
-          <p>Telefono</p>
-          <p>Correo</p>
-        </div>
-      </div>
-      <input type="checkbox" name="booking-itemselect1" id="agenda-itemselect4">
-      <div class="booking-item">
-        <div class="hour">
-          <h2>12:00</h2>
-        </div>
-        <div class="time">
-          <p>15m</p>
-        </div>
-        <div class="booking-patient-info">
-          <div class="booking-title-container">
-            <div class="booking-title">
-              <h3>Libre</h3>
-              <p></p>
-            </div>
-            <div class="booking-subtitle">
-
-            </div>
-          </div>
-          <div class="booking-notes-btn">
-
-          </div>
-        </div>
-        <div class="booking-btns">
-          <button class="bg-color-warning booking-btn" type="button" name="agendar-cita">agendar cita</button>
-        </div>
-        <div class="booking-notes">
-        </div>
-        <div class="contact-info">
-
-        </div>
-      </div>
-      <input type="checkbox" name="booking-itemselect1" id="agenda-itemselect5">
-      <div class="booking-item">
-        <div class="hour">
-          <h2>12:40</h2>
-        </div>
-        <div class="time">
-          <p>02d</p>
-        </div>
-        <div class="booking-patient-info">
-          <div class="booking-title-container">
-            <div class="booking-title">
-              <h3>Guillermina Gutierrez</h3>
-              <p>Revision Mensual</p>
-            </div>
-            <div class="booking-subtitle">
-              <p>Consultorio Personal</p>
-              <p>Sin Seguro</p>
-            </div>
-          </div>
-          <div class="booking-notes-btn">
-            <button type="button" class="btn-outline bg-color-primary" name="notes">
-              <label for="agenda-itemselect5">Notas</label></button>
-          </div>
-        </div>
-        <div class="booking-btns">
-          <a data-fancybox data-src="#modal-delay" data-modal="true" href="javascript:;">
-            <button type="button" class="delay-btn btn-outline bg-color-primary" name="button">
-              retrasar
-            </button>
-          </a>
-          <button type="button" class="contact-btn btn-outline bg-color-warning" name="contactar">
-            <label for="agenda-itemselect5"><p>contactar</p>
-              <svg viewBox="0 0 11 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <defs></defs>
-                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                      <g id="booking-stroke" transform="translate(-1156.000000, -319.000000)" stroke="#F5A623" stroke-width="2">
-                          <g transform="translate(275.000000, 291.000000)">
-                              <g transform="translate(748.000000, 16.000000)">
-                                  <polyline id="Page-1-Copy-3" transform="translate(138.500000, 15.250000) rotate(-90.000000) translate(-138.500000, -15.250000) " points="140.75 19.75 136.25 15.25 140.75 10.75"></polyline>
-                              </g>
-                          </g>
-                      </g>
-                  </g>
-              </svg>
-            </label></button>
-        </div>
-        <div class="booking-notes">
-          <h4>Notas del Paciente:</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-        </div>
-        <div class="contact-info">
-          <p>Telefono</p>
-          <p>Correo</p>
-        </div>
-      </div>
-
-    </div>
+  </div>
 </div>
-</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-<!-- Script for fancybox -->
-<script src="assets/js/jquery.fancybox.min.js"></script>
-<!-- Alerts for succeed reset / register -->
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script type="text/javascript">
-    function delayAlert() {
-      swal({
-  title: "Cita Reprogramada",
-  text: "Hemos enviado un mensaje al paciente",
-  icon: "success",
-  button: "Entendido",
-});
-    }
-
-</script>
 </body>
 </html>

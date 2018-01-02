@@ -1,0 +1,130 @@
+// Styles for New Patient section at the Dr. dashboard.
+
+.newpatient-head {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  padding-top: $space-2;
+  justify-content: space-between;
+  align-items: center;
+
+  .head {
+    display: flex;
+    align-items: center;
+    padding-right: $space-2;
+    border-right: 1px solid $color-primary;
+
+    img {
+      margin-right: $space-base;
+      margin-bottom: 0;
+    }
+
+    h1 {
+      font-size: 2em;
+      line-height: 1;
+      margin-bottom: 0;
+
+    }
+
+    h2 {
+      font-size: 2em;
+      font-weight: 300;
+      text-transform: lowercase;
+      line-height: 1;
+      margin-bottom: 0;
+    }
+  }
+
+  .newpatient-head-title {
+    display: flex;
+    flex-flow: column nowrap;
+    padding-left: $space-2;
+
+    h1 {
+      margin: 0;
+      line-height: 1;
+      font-weight: 400;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1em;
+      font-weight: 300;
+      text-transform: capitalize;
+
+    }
+  }
+
+  .newpatient-head-date {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .newpatient-head-date {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    align-self: flex-end;
+
+    p {
+      margin-bottom:  0;
+      line-height: 1;
+
+      &:first-of-type {
+        font-weight: bold;
+      }
+    }
+  }
+
+}
+
+.newpatient-title {
+  display: flex;
+  padding-top: $space-4;
+  margin-bottom: $space-4;
+
+  h2 {
+    min-width: fit-content;
+    font-size: 70px;
+    font-weight: 300;
+    margin: 0;
+    color: $gray-lighter;
+  }
+  span {
+    padding-left: $space-2;
+    h3 {
+      text-transform: capitalize;
+      margin: 0;
+    }
+    p {
+      max-width: 80%;
+    }
+  }
+}
+
+.newpatient-options {
+  display: flex;
+
+  p {
+    display: block;
+  }
+
+  span {
+
+    input {
+      margin: 0;
+
+    }
+    label {
+      margin: 0;
+    }
+
+  }
+}
+
+.clinic-history-form {
+
+  h3{
+    text-transform: capitalize;
+  }
+}

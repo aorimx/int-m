@@ -51,6 +51,29 @@
   }
 }
 
+.search-input {
+  position: relative;
+
+  .input-search {
+    text-indent: 32px;
+    border-radius: 8px;
+
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+
+    img {
+      width: 15px;
+      height: auto;
+      margin: 0;
+    }
+  }
+}
 .admin-nav-check {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -273,9 +296,9 @@ label[for="admin-nav-check"] {
 
 .main-container {
   min-height: 100%;
+  width: -webkit-fill-available;
   position: relative;
   top: 0;
-  bottom: 100%;
   left: 200px;
   margin-right: 48px;
   z-index: 3;
@@ -608,7 +631,7 @@ label[for="admin-nav-check"] {
           }
         }
 
-        .search {
+        .search-input {
           width: 45%;
           position: relative;
           margin-left: $space-3;
@@ -620,30 +643,15 @@ label[for="admin-nav-check"] {
             margin-left: $space-base;
           }
 
-          input{
-            text-indent: 32px;
-            border-radius: 8px;
+          .input-search {
             @media screen and (max-width: $tablet){
               min-width: 100px;
             }
             @media screen and (max-width: $mobile){
               min-width: 120px;
             }
-
           }
-          span {
-            display: flex;
-            align-items: center;
-            position: absolute;
-            top: 8px;
-            left: 16px;
 
-            img {
-              width: 15px;
-              height: auto;
-              margin: 0;
-            }
-          }
         }
       }
       .agenda-content {

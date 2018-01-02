@@ -1,0 +1,496 @@
+// Styles for patient seccion at the Dr Admin Dashboard
+
+.selector  {
+  display: none;
+}
+
+.patient-item-selector {
+
+  &:checked {
+    + label {
+      .patients-list-item {
+        background-color: $gray-ghost;
+        border-left: 8px solid $color-secondary !important;
+      }
+    }
+  }
+}
+.search-patient {
+  margin-right: $space-2;
+  margin-left: $space-2;
+}
+
+.patients-list-container {
+  width: 40%;
+
+  .patients-list-title {
+
+    .head {
+      display: flex;
+      align-items: center;
+      border-right: 1px solid $color-primary;
+
+      img {
+        margin-right: $space-base;
+        margin-bottom: 0;
+      }
+
+      h1 {
+        font-size: 2em;
+        line-height: 1;
+        margin-bottom: 0;
+
+      }
+
+      h2 {
+        font-size: 2em;
+        font-weight: 300;
+        text-transform: lowercase;
+        line-height: 1;
+        margin-bottom: 0;
+      }
+    }
+
+    .counter-submenu {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      margin-top: $space-4;
+
+      .patient-submenu-selector {
+        &:checked {
+          + .patient-submenu {
+            visibility: visible;
+            opacity: 1;
+            height: auto;
+          }
+        }
+      }
+      label {
+        cursor: pointer;
+      }
+      .patient-submenu {
+        position: absolute;
+        top: 25px;
+        right: 0;
+        z-index: 3;
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+
+        ul{
+          list-style: none;
+          letter-spacing: 0;
+          font-size: 14px;
+          li {
+            padding: $space-base;
+            margin: 0;
+            background-color: $white;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .patients-list-subcontainer {
+    display: flex;
+
+    .patients-list-abc {
+      display: flex;
+      flex-flow: column nowrap;
+      margin-right: $space-2;
+
+      p {
+        font-weight: 500;
+        color: $gray-regular;
+      }
+    }
+    .patients-list {
+      display: flex;
+      flex-flow: column nowrap;
+      width: 100%;
+      overflow: scroll;
+      margin-right: $space-base;
+      border-top: 1px solid $gray-regular;
+
+      .patients-list-letter {
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        width: -webkit-fill-available;
+        padding-top: $space-base;
+        background-color: $white;
+
+        p {
+          font-size: 2em;
+          font-weight: 800;
+          margin-bottom: 0;
+          line-height: 1;
+        }
+      }
+      label {
+        margin: 0;
+        cursor: pointer;
+
+        .patients-list-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          border-top: 1px solid $gray-lighter;
+          border-bottom: 1px solid $gray-lighter;
+          border-left: 8px solid transparent;
+
+          img {
+            max-width: 100px;
+            height: auto;
+            margin: $space-2;
+          }
+
+          .patients-list-item-txt {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+
+            h2 {
+              text-transform: capitalize;
+              margin-bottom: 0;
+              line-height: 1;
+            }
+            h3 {
+              text-transform: capitalize;
+              line-height: 1;
+              margin-bottom: $space-base;
+            }
+            p {
+              line-height: 1.2;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.patient-info-container {
+  margin-left: $space-2;
+  width: 58%;
+
+  .patient-info-title {
+    display: flex;
+    flex-flow: column nowrap;
+
+    h2 {
+      font-size: 2em;
+      font-weight: 400;
+    }
+    span {
+      align-self: flex-end;
+
+      p {
+        font-weight: 800;
+        letter-spacing: 0;
+        margin: 0;
+        line-height: 1;
+        text-align: right;
+
+        &:last-child {
+          font-weight: 200;
+        }
+      }
+    }
+    h3 {
+      font-size: 1.5em;
+      text-transform: capitalize;
+      color: $color-secondary;
+    }
+  }
+
+  .patient-info-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: $space-2;
+    border-bottom: 1px solid $gray-light;
+
+    h3 {
+      font-size: 1.5em;
+      text-transform: capitalize;
+      margin: 0;
+    }
+    p {
+      margin: 0;
+      font-size: 12px;
+      color: $gray-regular;
+    }
+
+  }
+  .patient-info-detail {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 2fr ;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "birthday age sex"
+    "phone mail mail";
+
+    .birthday {
+      grid-area: birthday;
+      padding-top: $space-2;
+    }
+    .age {
+      grid-area: age;
+      padding-top: $space-2;
+    }
+    .sex {
+      grid-area: sex;
+      padding-top: $space-2;
+    }
+    .phone {
+      grid-area: phone;
+      padding-bottom: $space-2;
+    }
+    .mail {
+      grid-area: mail;
+      padding-bottom: $space-2;
+    }
+
+    .title-subtitle {
+      h4 {
+        letter-spacing: 0;
+        font-size: 1em;
+        font-weight: 500;
+        margin-bottom: 0;
+        line-height: 1;
+      }
+    }
+  }
+  .patient-info-options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: $space-2;
+    border-top: 1px solid $gray-light;
+    border-bottom: 1px solid $gray-light;
+
+    h3 {
+      margin: 0;
+    }
+
+    span {
+      width: 2px;
+      height: 1em;
+      background-color: $gray-light;
+    }
+
+    label {
+      padding: $space-2;
+      margin-bottom: 0;
+      cursor: pointer;
+
+      &:active {
+        color: $color-warning;
+      }
+    }
+  }
+
+  #medical-file-selector {
+    display: none;
+
+    &:checked {
+
+      + .patient-info-options {
+        .medical-file-tab {
+          h3 {
+            color: $color-warning;
+          }
+        }
+      }
+
+      ~ .medical-file {
+        display: block;
+      }
+    }
+  }
+
+  #medical-consultation-selector {
+    display: none;
+
+    &:checked {
+
+      ~ .patient-info-options {
+        .medical-consultation-tab {
+          h3 {
+            color: $color-warning;
+          }
+        }
+      }
+
+      ~ .medical-consultation {
+        display: block;
+      }
+    }
+  }
+
+  .medical-file {
+    display: none;
+
+    .medical-file-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: $space-3;
+      margin-bottom: $space-3;
+
+      h3{
+        font-size: 1.5em;
+        text-transform: capitalize;
+        letter-spacing: 0;
+        color: $color-secondary;
+        margin: 0;
+      }
+    }
+
+    h2 {
+      font-size: 1.2em;
+      text-transform: capitalize;
+      color: $gray-light;
+    }
+
+    h3{
+      text-transform: capitalize;
+      margin: 0;
+    }
+    p {
+      line-height: 1;
+      letter-spacing: 0;
+    }
+    hr {
+      height: 1px;
+      color: $gray-light;
+    }
+  }
+
+  .medical-consultation {
+    display: none;
+    margin: $space-2;
+
+    .medical-consultation-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: $space-3;
+      margin-bottom: $space-3;
+
+      h3{
+        font-size: 1.5em;
+        text-transform: capitalize;
+        color: $color-secondary;
+        margin: 0;
+      }
+      button {
+        width: auto;
+        text-transform: capitalize;
+        font-weight: 500;
+        padding: $space-base;
+        margin-bottom: 0;
+      }
+    }
+    .medical-consultation-subtitle {
+      display: flex;
+      justify-content: space-between;
+      p {
+        font-weight: bold;
+      }
+    }
+    .medical-consultation-info-container {
+      display: flex;
+      flex-flow: column nowrap;
+
+      input {
+        display: none;
+
+        &:checked {
+          + .medical-consultation-info {
+            height: auto;
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+
+      label {
+        display: block;
+        width: 100%;
+        cursor: pointer;
+
+        span {
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px solid $gray-light;
+
+          p {
+            margin: 0;
+          }
+        }
+      }
+      .medical-consultation-info {
+        display: flex;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        flex-flow: column nowrap;
+
+        h3 {
+          margin-bottom: 0;
+          text-transform: capitalize;
+        }
+
+        h4{
+          color: $gray-light;
+          text-transform: capitalize;
+          letter-spacing: 0;
+          margin-top: $space-2;
+          margin-bottom: 0;
+          align-self: flex-end;
+        }
+
+        h5 {
+          align-self: flex-end;
+        }
+        p {
+          letter-spacing: 0;
+          line-height: 1;
+        }
+        .attached-files {
+          display: flex;
+
+          span {
+            display: flex;
+            flex-flow: column nowrap;
+            border-bottom: none;
+            margin: $space-2;
+
+            p {
+              font-size: 12px;
+
+            }
+          }
+        }
+        .medical-consultation-btns {
+          display: flex;
+          justify-content: space-between;
+
+          .btn-small {
+            margin: 0;
+            padding: $space-base;
+            font-size: 12px;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
