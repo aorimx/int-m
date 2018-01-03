@@ -3431,56 +3431,56 @@ label[for="admin-nav-check"] {
             font-size: 12px;
             width: auto; }
 
-.newpatient-head {
+.newpatient-consulting-head {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
   padding-top: 16px;
   justify-content: space-between;
   align-items: center; }
-  .newpatient-head .head {
+  .newpatient-consulting-head .head {
     display: flex;
     align-items: center;
     padding-right: 16px;
     border-right: 1px solid #6A696A; }
-    .newpatient-head .head img {
+    .newpatient-consulting-head .head img {
       margin-right: 8px;
       margin-bottom: 0; }
-    .newpatient-head .head h1 {
+    .newpatient-consulting-head .head h1 {
       font-size: 2em;
       line-height: 1;
       margin-bottom: 0; }
-    .newpatient-head .head h2 {
+    .newpatient-consulting-head .head h2 {
       font-size: 2em;
       font-weight: 300;
       text-transform: lowercase;
       line-height: 1;
       margin-bottom: 0; }
-  .newpatient-head .newpatient-head-title {
+  .newpatient-consulting-head .newpatient-head-title {
     display: flex;
     flex-flow: column nowrap;
     padding-left: 16px; }
-    .newpatient-head .newpatient-head-title h1 {
+    .newpatient-consulting-head .newpatient-head-title h1 {
       margin: 0;
       line-height: 1;
       font-weight: 400; }
-    .newpatient-head .newpatient-head-title h2 {
+    .newpatient-consulting-head .newpatient-head-title h2 {
       margin: 0;
       font-size: 1em;
       font-weight: 300;
       text-transform: capitalize; }
-  .newpatient-head .newpatient-head-date {
+  .newpatient-consulting-head .newpatient-head-date {
     display: flex;
     flex-flow: column nowrap; }
-  .newpatient-head .newpatient-head-date {
+  .newpatient-consulting-head .newpatient-head-date {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-end;
     align-self: flex-end; }
-    .newpatient-head .newpatient-head-date p {
+    .newpatient-consulting-head .newpatient-head-date p {
       margin-bottom: 0;
       line-height: 1; }
-      .newpatient-head .newpatient-head-date p:first-of-type {
+      .newpatient-consulting-head .newpatient-head-date p:first-of-type {
         font-weight: bold; }
 
 .newpatient-title {
@@ -3502,16 +3502,38 @@ label[for="admin-nav-check"] {
       max-width: 80%; }
 
 .newpatient-options {
-  display: flex; }
+  display: flex;
+  margin-bottom: 32px; }
   .newpatient-options p {
     display: block; }
   .newpatient-options span input {
     margin: 0; }
   .newpatient-options span label {
+    display: inline-block;
+    word-wrap: break-word;
     margin: 0; }
 
-.clinic-history-form h3 {
-  text-transform: capitalize; }
+.clinic-history-form {
+  display: flex;
+  flex-flow: column; }
+  .clinic-history-form h3 {
+    display: block;
+    text-transform: capitalize; }
+  .clinic-history-form .form-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+    .clinic-history-form .form-container span {
+      display: flex;
+      flex-flow: column nowrap;
+      width: 50%;
+      padding-right: 16px; }
+      .clinic-history-form .form-container span:nth-child(even) {
+        padding-right: 0; }
+    .clinic-history-form .form-container button {
+      height: fit-content;
+      padding: 8px;
+      margin-bottom: 0; }
 
 .title-container-fav {
   width: 90%;
@@ -3613,6 +3635,11 @@ label[for="admin-nav-check"] {
           .recommended-container .recommended-item .recommended-text .recommended-btn .social img {
             max-width: 20px;
             margin-bottom: 8px; }
+
+.consultation-form {
+  width: 100%; }
+  .consultation-form .form-container input {
+    height: 100px; }
 
 .bkt-strengths {
   padding: 64px;
