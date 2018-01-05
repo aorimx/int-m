@@ -3,6 +3,32 @@
 .consultation-form {
   width: 100%;
   .form-container {
+
+    textarea {
+      resize: none;
+    }
+
+    .plus-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $gray-regular;
+      margin-bottom: $space-4;
+      font-weight: 600;
+      background-color: $white;
+      border: 1px solid $gray-regular;
+      @include box-shadow (3px ,3px ,10px ,0px ,$shadow-color);
+
+      &:hover {
+        transition: all 500ms ease-in-out;
+        @include box-shadow (3px ,3px ,10px ,0px ,$shadow-color, inset);
+      }
+
+      img {
+        margin-bottom: 0;
+        padding-right: $space-base;
+      }
+    }
     input {
       height: 100px;
     }

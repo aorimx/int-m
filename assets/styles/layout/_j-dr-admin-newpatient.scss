@@ -1,6 +1,6 @@
 // Styles for New Patient section at the Dr. dashboard.
 
-.newpatient-consulting-head {
+.newexpedient-consulting-head {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
@@ -8,59 +8,58 @@
   justify-content: space-between;
   align-items: center;
 
-  .head {
+  .head-group {
     display: flex;
-    align-items: center;
-    padding-right: $space-2;
-    border-right: 1px solid $color-primary;
+    flex-flow: row nowrap;
+    .head {
+      display: flex;
+      align-items: center;
+      padding-right: $space-2;
+      border-right: 1px solid $color-primary;
 
-    img {
-      margin-right: $space-base;
-      margin-bottom: 0;
+      img {
+        margin-right: $space-base;
+        margin-bottom: 0;
+      }
+
+      h1 {
+        font-size: 2em;
+        line-height: 1;
+        margin-bottom: 0;
+
+      }
+
+      h2 {
+        font-size: 2em;
+        font-weight: 300;
+        text-transform: lowercase;
+        line-height: 1;
+        margin-bottom: 0;
+      }
     }
 
-    h1 {
-      font-size: 2em;
-      line-height: 1;
-      margin-bottom: 0;
+    .newexpedient-head-title {
+      display: flex;
+      flex-flow: column nowrap;
+      padding-left: $space-2;
 
-    }
+      h1 {
+        margin: 0;
+        line-height: 1;
+        font-weight: 400;
+      }
 
-    h2 {
-      font-size: 2em;
-      font-weight: 300;
-      text-transform: lowercase;
-      line-height: 1;
-      margin-bottom: 0;
+      h2 {
+        margin: 0;
+        font-size: 1em;
+        font-weight: 300;
+        text-transform: capitalize;
+
+      }
     }
   }
 
-  .newpatient-head-title {
-    display: flex;
-    flex-flow: column nowrap;
-    padding-left: $space-2;
-
-    h1 {
-      margin: 0;
-      line-height: 1;
-      font-weight: 400;
-    }
-
-    h2 {
-      margin: 0;
-      font-size: 1em;
-      font-weight: 300;
-      text-transform: capitalize;
-
-    }
-  }
-
-  .newpatient-head-date {
-    display: flex;
-    flex-flow: column nowrap;
-  }
-
-  .newpatient-head-date {
+  .newexpedient-head-date {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-end;
@@ -78,7 +77,7 @@
 
 }
 
-.newpatient-title {
+.newexpedient-title {
   display: flex;
   padding-top: $space-4;
   margin-bottom: $space-4;
@@ -102,7 +101,7 @@
   }
 }
 
-.newpatient-options {
+.newexpedient-options {
   display: flex;
   margin-bottom: $space-4;
 
@@ -150,6 +149,7 @@
     }
     button {
       height: fit-content;
+      margin-top: 16px;
       padding: $space-base;
       margin-bottom: 0;
     }
